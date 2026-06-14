@@ -152,21 +152,85 @@
   
   <script src="../assets/vendor/aos.js"></script>
   <script src="../assets/js/config.js"></script>
-  <script>
-    AOS.init({ duration: 600, easing: 'ease-out-cubic', once: true, offset: 50 });
-    lucide.createIcons();
+    <script>
+    // Wait for DOM to be fully loaded before initializing
+    document.addEventListener('DOMContentLoaded', function() {
+      // Initialize AOS (with error handling)
+      try {
+        if (typeof AOS !== 'undefined') {
+          AOS.init({
+            duration: 600,
+            easing: 'ease-out-cubic',
+            once: true,
+            offset: 50,
+            init: function() {
+              document.body.classList.remove('no-aos');
+            }
+          });
+        } else {
+          console.warn('AOS not loaded, adding fallback class');
+          document.body.classList.add('no-aos');
+        }
+      } catch (e) {
+        console.warn('AOS init error:', e);
+        document.body.classList.add('no-aos');
+      }
+      
+      // Initialize Lucide Icons (with error handling)
+      try {
+        if (typeof lucide !== 'undefined' && typeof lucide.createIcons === 'function') {
+          lucide.createIcons();
+          console.log('Lucide icons initialized successfully');
+        } else {
+          console.warn('Lucide not loaded');
+        }
+      } catch (e) {
+        console.warn('Lucide init error:', e);
+      }
+    });
     
-    // Mobile menu
+    // Fallback: if AOS doesn't load in 1.5s, make content visible
+    setTimeout(function() {
+      if (typeof AOS === 'undefined' || !AOS.initialized) {
+        document.body.classList.add('no-aos');
+      }
+    }, 1500);
+    
+    // Navbar scroll effect
+    const navbar = document.getElementById('navbar');
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 50) {
+        navbar.classList.add('bg-surface/95', 'backdrop-blur-md', 'shadow-lg');
+        navbar.classList.remove('bg-transparent');
+      } else {
+        navbar.classList.remove('bg-surface/95', 'backdrop-blur-md', 'shadow-lg');
+        navbar.classList.add('bg-transparent');
+      }
+    });
+    
+    // Mobile menu toggle
     const mobileMenuBtn = document.getElementById('mobile-menu-btn');
     const mobileMenu = document.getElementById('mobile-menu');
+    
     mobileMenuBtn.addEventListener('click', () => {
       const isExpanded = mobileMenuBtn.getAttribute('aria-expanded') === 'true';
       mobileMenuBtn.setAttribute('aria-expanded', !isExpanded);
       mobileMenu.classList.toggle('hidden');
+      
       const icon = mobileMenuBtn.querySelector('i');
-      icon.setAttribute('data-lucide', isExpanded ? 'menu' : 'x');
+      if (isExpanded) {
+        icon.setAttribute('data-lucide', 'menu');
+      } else {
+        icon.setAttribute('data-lucide', 'x');
+      }
       lucide.createIcons();
     });
+    
+    // Set current year
+    const yearElement = document.getElementById('current-year');
+    if (yearElement) {
+      yearElement.textContent = new Date().getFullYear();
+    }
   </script>
 </body>
 </html>

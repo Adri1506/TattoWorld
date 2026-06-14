@@ -1,0 +1,64 @@
+{
+  "screenshots": [
+    {
+      "page": "index",
+      "viewport": "mobile",
+      "path": "C:\\Users\\adria\\IdeaProjects\\TattoWorld\\outputs\\qa\\visual-qa\\screenshots\\index-mobile.png"
+    },
+    {
+      "page": "index",
+      "viewport": "tablet",
+      "path": "C:\\Users\\adria\\IdeaProjects\\TattoWorld\\outputs\\qa\\visual-qa\\screenshots\\index-tablet.png"
+    },
+    {
+      "page": "index",
+      "viewport": "desktop",
+      "path": "C:\\Users\\adria\\IdeaProjects\\TattoWorld\\outputs\\qa\\visual-qa\\screenshots\\index-desktop.png"
+    },
+    {
+      "page": "servicios",
+      "viewport": "mobile",
+      "path": "C:\\Users\\adria\\IdeaProjects\\TattoWorld\\outputs\\qa\\visual-qa\\screenshots\\servicios-mobile.png"
+    },
+    {
+      "page": "servicios",
+      "viewport": "tablet",
+      "path": "C:\\Users\\adria\\IdeaProjects\\TattoWorld\\outputs\\qa\\visual-qa\\screenshots\\servicios-tablet.png"
+    },
+    {
+      "page": "servicios",
+      "viewport": "desktop",
+      "path": "C:\\Users\\adria\\IdeaProjects\\TattoWorld\\outputs\\qa\\visual-qa\\screenshots\\servicios-desktop.png"
+    },
+    {
+      "page": "galeria",
+      "viewport": "mobile",
+      "path": "C:\\Users\\adria\\IdeaProjects\\TattoWorld\\outputs\\qa\\visual-qa\\screenshots\\galeria-mobile.png"
+    },
+    {
+      "page": "galeria",
+      "viewport": "tablet",
+      "path": "C:\\Users\\adria\\IdeaProjects\\TattoWorld\\outputs\\qa\\visual-qa\\screenshots\\galeria-tablet.png"
+    },
+    {
+      "page": "galeria",
+      "viewport": "desktop",
+      "path": "C:\\Users\\adria\\IdeaProjects\\TattoWorld\\outputs\\qa\\visual-qa\\screenshots\\galeria-desktop.png"
+    },
+    {
+      "page": "contacto",
+      "viewport": "mobile",
+      "path": "C:\\Users\\adria\\IdeaProjects\\TattoWorld\\outputs\\qa\\visual-qa\\screenshots\\contacto-mobile.png"
+    },
+    {
+      "page": "contacto",
+      "viewport": "tablet",
+      "path": "C:\\Users\\adria\\IdeaProjects\\TattoWorld\\outputs\\qa\\visual-qa\\screenshots\\contacto-tablet.png"
+    },
+    {
+      "page": "contacto",
+      "viewport": "desktop",
+      "path": "C:\\Users\\adria\\IdeaProjects\\TattoWorld\\outputs\\qa\\visual-qa\\screenshots\\contacto-desktop.png"
+    }
+  ]
+}
