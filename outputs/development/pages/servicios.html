@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <!-- SEO Meta Tags -->
+  <title>Servicios - TattoWorld | Tatuajes a Domicilio</title>
+  <meta name="description" content="Descubre nuestros servicios de tatuaje a domicilio. Blackwork, realismo, tradicional, fine line y más. Precios accesibles y calidad garantizada.">
+  <meta name="keywords" content="servicios tatuaje, precios tatuaje, tatuajes a domicilio, blackwork, realismo, tradicional, fine line">
+  
+  <!-- Open Graph -->
+  <meta property="og:title" content="Servicios - TattoWorld">
+  <meta property="og:description" content="Servicios de tatuaje a domicilio en Santiago, Chile">
+  <meta property="og:image" content="../assets/img/og-image.jpg">
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/x-icon" href="../assets/img/icons/favicon.ico">
+  
+  <!-- Google Fonts (Local) -->
+  <link rel="stylesheet" href="../assets/vendor/fonts.css">
+  
+  <!-- Tailwind CSS (Local) -->
+  <script src="../assets/vendor/tailwind.js"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: '#1a1a1a',
+            secondary: '#2d2d2d',
+            accent: '#c9a227',
+            'accent-hover': '#b8912a',
+            background: '#0d0d0d',
+            surface: '#1e1e1e',
+            'text-primary': '#ffffff',
+            'text-secondary': '#a3a3a3',
+            'text-muted': '#666666',
+            border: '#333333'
+          },
+          fontFamily: {
+            sans: ['Inter', 'system-ui', 'sans-serif']
+          }
+        }
+      }
+    }
+  </script>
+  
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="../assets/css/styles.css">
+  
+  <!-- AOS (Local) -->
+  <link href="../assets/vendor/aos.css" rel="stylesheet">
+  
+  <!-- Lucide Icons (Local) -->
+  <script src="../assets/vendor/lucide.min.js"></script>
+</head>
+<body class="bg-background text-text-primary font-sans">
+  <a href="#main-content" class="skip-link">Saltar al contenido principal</a>
+  
+  <!-- Navbar -->
+  <nav id="navbar" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-surface/95 backdrop-blur-md shadow-lg">
+    <div class="container mx-auto px-4 md:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-16 md:h-20">
+        <a href="../index.html" class="flex items-center gap-2">
+          <span class="text-2xl md:text-3xl font-bold text-accent">Tatto</span>
+          <span class="text-2xl md:text-3xl font-bold text-text-primary">World</span>
+        </a>
+        
+        <div class="hidden md:flex items-center gap-8">
+          <a href="../index.html" class="nav-link text-text-secondary hover:text-accent transition-colors font-medium">Inicio</a>
+          <a href="servicios.html" class="nav-link text-accent font-medium">Servicios</a>
+          <a href="galeria.html" class="nav-link text-text-secondary hover:text-accent transition-colors font-medium">Galería</a>
+          <a href="contacto.html" class="nav-link text-text-secondary hover:text-accent transition-colors font-medium">Contacto</a>
+          <a href="contacto.html" class="btn btn-primary text-sm">Agendar Cita</a>
+        </div>
+        
+        <button id="mobile-menu-btn" class="md:hidden p-2 text-text-secondary hover:text-accent" aria-label="Abrir menú" aria-expanded="false">
+          <i data-lucide="menu" class="w-6 h-6"></i>
+        </button>
+      </div>
+    </div>
+    
+    <div id="mobile-menu" class="md:hidden hidden bg-surface border-t border-border">
+      <div class="container mx-auto px-4 py-4 flex flex-col gap-4">
+        <a href="../index.html" class="text-text-secondary hover:text-accent font-medium py-2">Inicio</a>
+        <a href="servicios.html" class="text-accent font-medium py-2">Servicios</a>
+        <a href="galeria.html" class="text-text-secondary hover:text-accent font-medium py-2">Galería</a>
+        <a href="contacto.html" class="text-text-secondary hover:text-accent font-medium py-2">Contacto</a>
+        <a href="contacto.html" class="btn btn-primary text-sm mt-2">Agendar Cita</a>
+      </div>
+    </div>
+  </nav>
+  
+  <main id="main-content">
+    <!-- Page Header -->
+    <section class="relative py-16 md:py-24 bg-surface overflow-hidden">
+      <div class="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-transparent via-accent to-transparent"></div>
+      <div class="container mx-auto px-4 md:px-6 lg:px-8 relative z-10">
+        <div class="max-w-3xl mx-auto text-center">
+          <nav class="mb-6" aria-label="Breadcrumb">
+            <ol class="flex items-center justify-center gap-2 text-sm text-text-muted">
+              <li><a href="../index.html" class="hover:text-accent transition-colors">Inicio</a></li>
+              <li aria-hidden="true">/</li>
+              <li class="text-accent" aria-current="page">Servicios</li>
+            </ol>
+          </nav>
+          <h1 class="text-3xl md:text-4xl lg:text-5xl font-bold mb-4" data-aos="fade-up">Servicios</h1>
+          <p class="text-lg md:text-xl text-text-secondary" data-aos="fade-up" data-aos-delay="100">Ofrezco servicios de tatuaje profesional a domicilio. Calidad, higiene y creatividad en cada trabajo.</p>
+        </div>
+      </div>
+    </section>
+    
+    <!-- Service Detail Cards -->
+    <section class="py-16 md:py-24 bg-background">
+      <div class="container mx-auto px-4 md:px-6 lg:px-8">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <!-- Blackwork -->
+          <div class="card" data-aos="fade-up" data-aos-delay="100">
+            <div class="flex items-start gap-4 mb-4">
+              <div class="w-12 h-12 bg-accent/10 rounded-lg flex items-center justify-center flex-shrink-0">
+                <i data-lucide="pen-tool" class="w-6 h-6 text-accent"></i>
+              </div>
+              <div>
+                <h3 class="text-xl font-semibold mb-1">Blackwork</h3>
+                <p class="text-accent text-sm font-medium">Desde $40.000</p>
+              </div>
+            </div>
+            <p class="text-text-secondary mb-4">Diseños geométricos, mandalas, patrones y siluetas con tinta negra. Estilo bold y impactante que destaca por su contraste y precisión.</p>
+            <div class="flex items-center gap-4 text-sm text-text-muted">
+              <span class="flex items-center gap-1"><i data-lucide="clock" class="w-4 h-4"></i> 2-4 horas</span>
+              <span class="flex items-center gap-1"><i data-lucide="ruler" class="w-4 h-4"></i> Variable</span>
+            </div>
+          </div>
+          
+          <!-- Realismo -->
+          <div class="card" data-aos="fade-up" data-aos-delay="200">
+            <div class="flex items-start gap-4 mb-4">
+              <div class="w-12 h-12 bg-accent/10 rounded-lg flex items-center justify-center flex-shrink-0">
+                <i data-lucide="eye" class="w-6 h-6 text-accent"></i>
+              </div>
+              <div>
+                <h3 class="text-xl font-semibold mb-1">Realismo</h3>
+                <p class="text-accent text-sm font-medium">Desde $60.000</p>
+              </div>
+            </div>
+            <p class="text-text-secondary mb-4">Retratos, paisajes y elementos hiperrealistas. Detalle extremo y precisión en cada trazo para resultados impresionantes.</p>
+            <div class="flex items-center gap-4 text-sm text-text-muted">
+              <span class="flex items-center gap-1"><i data-lucide="clock" class="w-4 h-4"></i> 3-6 horas</span>
+              <span class="flex items-center gap-1"><i data-lucide="ruler" class="w-4 h-4"></i> Variable</span>
+            </div>
+          </div>
+          
+          <!-- Tradicional -->
+          <div class="card" data-aos="fade-up" data-aos-delay="100">
+            <div class="flex items-start gap-4 mb-4">
+              <div class="w-12 h-12 bg-accent/10 rounded-lg flex items-center justify-center flex-shrink-0">
+                <i data-lucide="flower-2" class="w-6 h-6 text-accent"></i>
+              </div>
+              <div>
+                <h3 class="text-xl font-semibold mb-1">Tradicional</h3>
+                <p class="text-accent text-sm font-medium">Desde $45.000</p>
+              </div>
+            </div>
+            <p class="text-text-secondary mb-4">Estilo clásico americano con colores vibrantes y contornos marcados. Rosas, águilas, anclas y diseños atemporales.</p>
+            <div class="flex items-center gap-4 text-sm text-text-muted">
+              <span class="flex items-center gap-1"><i data-lucide="clock" class="w-4 h-4"></i> 2-4 horas</span>
+              <span class="flex items-center gap-1"><i data-lucide="ruler" class="w-4 h-4"></i> Variable</span>
+            </div>
+          </div>
+          
+          <!-- Fine Line -->
+          <div class="card" data-aos="fade-up" data-aos-delay="200">
+            <div class="flex items-start gap-4 mb-4">
+              <div class="w-12 h-12 bg-accent/10 rounded-lg flex items-center justify-center flex-shrink-0">
+                <i data-lucide="sparkles" class="w-6 h-6 text-accent"></i>
+              </div>
+              <div>
+                <h3 class="text-xl font-semibold mb-1">Fine Line</h3>
+                <p class="text-accent text-sm font-medium">Desde $35.000</p>
+              </div>
+            </div>
+            <p class="text-text-secondary mb-4">Líneas finas y delicadas. Flores, mariposas,Minimalista y elegante. Perfecto para diseños sutiles y refinados.</p>
+            <div class="flex items-center gap-4 text-sm text-text-muted">
+              <span class="flex items-center gap-1"><i data-lucide="clock" class="w-4 h-4"></i> 1-3 horas</span>
+              <span class="flex items-center gap-1"><i data-lucide="ruler" class="w-4 h-4"></i> Variable</span>
+            </div>
+          </div>
+          
+          <!-- Neo-Traditional -->
+          <div class="card" data-aos="fade-up" data-aos-delay="100">
+            <div class="flex items-start gap-4 mb-4">
+              <div class="w-12 h-12 bg-accent/10 rounded-lg flex items-center justify-center flex-shrink-0">
+                <i data-lucide="dragon" class="w-6 h-6 text-accent"></i>
+              </div>
+              <div>
+                <h3 class="text-xl font-semibold mb-1">Neo-Traditional</h3>
+                <p class="text-accent text-sm font-medium">Desde $50.000</p>
+              </div>
+            </div>
+            <p class="text-text-secondary mb-4">Fusión de tradicional y realismo. Colores vibrantes con más detalle y profundidad que el estilo clásico.</p>
+            <div class="flex items-center gap-4 text-sm text-text-muted">
+              <span class="flex items-center gap-1"><i data-lucide="clock" class="w-4 h-4"></i> 3-5 horas</span>
+              <span class="flex items-center gap-1"><i data-lucide="ruler" class="w-4 h-4"></i> Variable</span>
+            </div>
+          </div>
+          
+          <!-- Punk -->
+          <div class="card" data-aos="fade-up" data-aos-delay="200">
+            <div class="flex items-start gap-4 mb-4">
+              <div class="w-12 h-12 bg-accent/10 rounded-lg flex items-center justify-center flex-shrink-0">
+                <i data-lucide="skull" class="w-6 h-6 text-accent"></i>
+              </div>
+              <div>
+                <h3 class="text-xl font-semibold mb-1">Punk</h3>
+                <p class="text-accent text-sm font-medium">Desde $40.000</p>
+              </div>
+            </div>
+            <p class="text-text-secondary mb-4">Calaveras, banderas, símbolos rebeldes. Estilo crudo y directo que expresa actitud y personalidad.</p>
+            <div class="flex items-center gap-4 text-sm text-text-muted">
+              <span class="flex items-center gap-1"><i data-lucide="clock" class="w-4 h-4"></i> 2-4 horas</span>
+              <span class="flex items-center gap-1"><i data-lucide="ruler" class="w-4 h-4"></i> Variable</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <!-- Pricing Section -->
+    <section class="py-16 md:py-24 bg-surface">
+      <div class="container mx-auto px-4 md:px-6 lg:px-8">
+        <div class="text-center mb-12" data-aos="fade-up">
+          <span class="text-accent text-sm font-semibold uppercase tracking-wider">Precios</span>
+          <h2 class="text-3xl md:text-4xl font-bold mt-2 mb-4">Tabla de Precios</h2>
+          <p class="text-text-secondary max-w-2xl mx-auto">Precios orientativos. El costo final depende del tamaño, complejidad y tiempo estimado.</p>
+        </div>
+        
+        <div class="max-w-3xl mx-auto" data-aos="fade-up" data-aos-delay="100">
+          <div class="bg-primary rounded-xl border border-border overflow-hidden">
+            <div class="grid grid-cols-3 bg-surface border-b border-border text-sm font-semibold">
+              <div class="p-4">Servicio</div>
+              <div class="p-4 text-center">Precio Desde</div>
+              <div class="p-4 text-center">Tiempo Est.</div>
+            </div>
+            <div class="divide-y divide-border">
+              <div class="grid grid-cols-3 p-4 hover:bg-surface/50 transition-colors">
+                <div class="font-medium">Blackwork</div>
+                <div class="text-center text-accent">$40.000</div>
+                <div class="text-center text-text-muted">2-4 hrs</div>
+              </div>
+              <div class="grid grid-cols-3 p-4 hover:bg-surface/50 transition-colors">
+                <div class="font-medium">Realismo</div>
+                <div class="text-center text-accent">$60.000</div>
+                <div class="text-center text-text-muted">3-6 hrs</div>
+              </div>
+              <div class="grid grid-cols-3 p-4 hover:bg-surface/50 transition-colors">
+                <div class="font-medium">Tradicional</div>
+                <div class="text-center text-accent">$45.000</div>
+                <div class="text-center text-text-muted">2-4 hrs</div>
+              </div>
+              <div class="grid grid-cols-3 p-4 hover:bg-surface/50 transition-colors">
+                <div class="font-medium">Fine Line</div>
+                <div class="text-center text-accent">$35.000</div>
+                <div class="text-center text-text-muted">1-3 hrs</div>
+              </div>
+              <div class="grid grid-cols-3 p-4 hover:bg-surface/50 transition-colors">
+                <div class="font-medium">Neo-Traditional</div>
+                <div class="text-center text-accent">$50.000</div>
+                <div class="text-center text-text-muted">3-5 hrs</div>
+              </div>
+              <div class="grid grid-cols-3 p-4 hover:bg-surface/50 transition-colors">
+                <div class="font-medium">Punk</div>
+                <div class="text-center text-accent">$40.000</div>
+                <div class="text-center text-text-muted">2-4 hrs</div>
+              </div>
+            </div>
+          </div>
+          <p class="text-text-muted text-sm mt-4 text-center">* Precios en pesos chilenos (CLP). Consultar para presupuesto personalizado.</p>
+        </div>
+      </div>
+    </section>
+    
+    <!-- Coverage Section -->
+    <section class="py-16 md:py-24 bg-background">
+      <div class="container mx-auto px-4 md:px-6 lg:px-8">
+        <div class="max-w-4xl mx-auto">
+          <div class="text-center mb-12" data-aos="fade-up">
+            <span class="text-accent text-sm font-semibold uppercase tracking-wider">Cobertura</span>
+            <h2 class="text-3xl md:text-4xl font-bold mt-2 mb-4">Zona de Cobertura</h2>
+            <p class="text-text-secondary max-w-2xl mx-auto">Brindo servicio de tatuaje a domicilio en las principales comunas de Santiago.</p>
+          </div>
+          
+          <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4" data-aos="fade-up" data-aos-delay="100">
+            <div class="bg-surface rounded-lg p-4 text-center border border-border hover:border-accent transition-colors">
+              <i data-lucide="map-pin" class="w-5 h-5 text-accent mx-auto mb-2"></i>
+              <span class="text-sm">Las Condes</span>
+            </div>
+            <div class="bg-surface rounded-lg p-4 text-center border border-border hover:border-accent transition-colors">
+              <i data-lucide="map-pin" class="w-5 h-5 text-accent mx-auto mb-2"></i>
+              <span class="text-sm">Vitacura</span>
+            </div>
+            <div class="bg-surface rounded-lg p-4 text-center border border-border hover:border-accent transition-colors">
+              <i data-lucide="map-pin" class="w-5 h-5 text-accent mx-auto mb-2"></i>
+              <span class="text-sm">Providencia</span>
+            </div>
+            <div class="bg-surface rounded-lg p-4 text-center border border-border hover:border-accent transition-colors">
+              <i data-lucide="map-pin" class="w-5 h-5 text-accent mx-auto mb-2"></i>
+              <span class="text-sm">Santiago Centro</span>
+            </div>
+            <div class="bg-surface rounded-lg p-4 text-center border border-border hover:border-accent transition-colors">
+              <i data-lucide="map-pin" class="w-5 h-5 text-accent mx-auto mb-2"></i>
+              <span class="text-sm">Ñuñoa</span>
+            </div>
+            <div class="bg-surface rounded-lg p-4 text-center border border-border hover:border-accent transition-colors">
+              <i data-lucide="map-pin" class="w-5 h-5 text-accent mx-auto mb-2"></i>
+              <span class="text-sm">La Reina</span>
+            </div>
+            <div class="bg-surface rounded-lg p-4 text-center border border-border hover:border-accent transition-colors">
+              <i data-lucide="map-pin" class="w-5 h-5 text-accent mx-auto mb-2"></i>
+              <span class="text-sm">Macul</span>
+            </div>
+            <div class="bg-surface rounded-lg p-4 text-center border border-border hover:border-accent transition-colors">
+              <i data-lucide="map-pin" class="w-5 h-5 text-accent mx-auto mb-2"></i>
+              <span class="text-sm">Peñalolén</span>
+            </div>
+          </div>
+          
+          <p class="text-text-muted text-sm mt-6 text-center" data-aos="fade-up">¿No ves tu comuna? Contáctame y consultamos la disponibilidad.</p>
+        </div>
+      </div>
+    </section>
+    
+    <!-- CTA Section -->
+    <section class="py-16 md:py-24 bg-gradient-to-br from-surface via-primary to-background relative overflow-hidden">
+      <div class="absolute inset-0 opacity-10">
+        <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-accent rounded-full blur-3xl"></div>
+      </div>
+      <div class="container mx-auto px-4 md:px-6 lg:px-8 relative z-10">
+        <div class="max-w-4xl mx-auto text-center">
+          <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold mb-6" data-aos="fade-up">¿Listo para tu próximo tatuaje?</h2>
+          <p class="text-lg md:text-xl text-text-secondary mb-8" data-aos="fade-up" data-aos-delay="100">Contáctame y hagamos realidad tu idea.</p>
+          <div class="flex flex-col sm:flex-row items-center justify-center gap-4" data-aos="fade-up" data-aos-delay="200">
+            <a href="contacto.html" class="btn btn-primary text-lg px-8 py-4">
+              <i data-lucide="calendar" class="w-5 h-5"></i>
+              Agenda tu Cita
+            </a>
+            <a id="servicios-whatsapp-cta" href="#" target="_blank" rel="noopener noreferrer" class="btn btn-secondary text-lg px-8 py-4">
+              <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+              Escríbenos por WhatsApp
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  
+  <!-- Footer -->
+  <footer class="bg-surface border-t border-border">
+    <div class="container mx-auto px-4 md:px-6 lg:px-8 py-12 md:py-16">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div class="lg:col-span-2">
+          <a href="../index.html" class="flex items-center gap-2 mb-4">
+            <span class="text-2xl font-bold text-accent">Tatto</span>
+            <span class="text-2xl font-bold text-text-primary">World</span>
+          </a>
+          <p class="text-text-secondary mb-6 max-w-md">Tatuajes a domicilio en tu zona. Arte, higiene y profesionalismo.</p>
+          <div class="flex gap-4">
+            <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer" class="p-2 bg-primary rounded-full hover:bg-accent transition-colors" aria-label="Instagram"><i data-lucide="instagram" class="w-5 h-5"></i></a>
+            <a href="https://www.tiktok.com/" target="_blank" rel="noopener noreferrer" class="p-2 bg-primary rounded-full hover:bg-accent transition-colors" aria-label="TikTok"><i data-lucide="music-2" class="w-5 h-5"></i></a>
+          </div>
+        </div>
+        <div>
+          <h3 class="text-lg font-semibold mb-4">Navegación</h3>
+          <ul class="space-y-3">
+            <li><a href="../index.html" class="text-text-secondary hover:text-accent transition-colors">Inicio</a></li>
+            <li><a href="servicios.html" class="text-text-secondary hover:text-accent transition-colors">Servicios</a></li>
+            <li><a href="galeria.html" class="text-text-secondary hover:text-accent transition-colors">Galería</a></li>
+            <li><a href="contacto.html" class="text-text-secondary hover:text-accent transition-colors">Contacto</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="text-lg font-semibold mb-4">Contacto</h3>
+          <ul class="space-y-3">
+            <li class="flex items-center gap-2 text-text-secondary"><i data-lucide="phone" class="w-4 h-4 text-accent"></i><a id="servicios-phone" href="tel:+56912345678">+56 9 1234 5678</a></li>
+            <li class="flex items-center gap-2 text-text-secondary"><i data-lucide="mail" class="w-4 h-4 text-accent"></i><a href="mailto:contacto@tattoworld.cl">contacto@tattoworld.cl</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="mt-12 pt-8 border-t border-border text-center">
+        <p class="text-text-muted text-sm">&copy; 2026 TattoWorld. Todos los derechos reservados.</p>
+      </div>
+    </div>
+  </footer>
+  
+  <!-- WhatsApp Button -->
+  <div class="fixed bottom-6 right-6 z-50">
+    <a id="whatsapp-link" href="#" target="_blank" rel="noopener noreferrer" class="group flex items-center gap-3" aria-label="Contactar por WhatsApp">
+      <span class="hidden md:block bg-surface text-text-primary px-4 py-2 rounded-lg shadow-lg opacity-0 group-hover:opacity-100 transition-opacity text-sm font-medium">¡Escríbenos!</span>
+      <div class="relative">
+        <span class="absolute inset-0 bg-green-500 rounded-full animate-ping opacity-75"></span>
+        <span class="relative flex items-center justify-center w-14 h-14 bg-green-500 rounded-full shadow-lg hover:bg-green-600 transition-colors">
+          <svg class="w-7 h-7 text-white" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+        </span>
+      </div>
+    </a>
+  </div>
+  
+  <script src="../assets/vendor/aos.js"></script>
+  <script src="../assets/js/config.js"></script>
+  <script src="../assets/js/whatsapp.js"></script>
+  <script>
+    AOS.init({ duration: 600, easing: 'ease-out-cubic', once: true, offset: 50 });
+    lucide.createIcons();
+    
+    const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+    mobileMenuBtn.addEventListener('click', () => {
+      const isExpanded = mobileMenuBtn.getAttribute('aria-expanded') === 'true';
+      mobileMenuBtn.setAttribute('aria-expanded', !isExpanded);
+      mobileMenu.classList.toggle('hidden');
+      const icon = mobileMenuBtn.querySelector('i');
+      icon.setAttribute('data-lucide', isExpanded ? 'menu' : 'x');
+      lucide.createIcons();
+    });
+  </script>
+</body>
+</html>

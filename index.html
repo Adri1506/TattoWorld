@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  
+  <!-- SEO Meta Tags -->
+  <title>TattoWorld - Tatuajes a Domicilio | Arte en tu Hogar</title>
+  <meta name="description" content="Tatuajes profesionales a domicilio en Santiago, Chile. Blackwork, realismo, tradicional, fine line y más. Higiene garantizada y arte de calidad.">
+  <meta name="keywords" content="tatuajes, tatuajes a domicilio, tatuador, blackwork, realismo, tradicional, fine line, punk, Santiago, Chile">
+  <meta name="author" content="TattoWorld">
+  <meta name="robots" content="index, follow">
+  
+  <!-- Open Graph -->
+  <meta property="og:title" content="TattoWorld - Tatuajes a Domicilio">
+  <meta property="og:description" content="Tatuajes profesionales a domicilio en Santiago, Chile. Arte, higiene y profesionalismo.">
+  <meta property="og:image" content="assets/img/og-image.svg">
+  <meta property="og:url" content="https://tattoworld.github.io">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="es_CL">
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="assets/img/icons/favicon.svg">
+  <link rel="manifest" href="site.webmanifest">
+  
+  <!-- Google Fonts - Inter (Local) -->
+  <link rel="stylesheet" href="assets/vendor/fonts.css">
+  
+  <!-- Tailwind CSS (Local) -->
+  <script src="assets/vendor/tailwind.js"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: '#1a1a1a',
+            secondary: '#2d2d2d',
+            accent: '#c9a227',
+            'accent-hover': '#b8912a',
+            background: '#0d0d0d',
+            surface: '#1e1e1e',
+            'text-primary': '#ffffff',
+            'text-secondary': '#a3a3a3',
+            'text-muted': '#666666',
+            border: '#333333'
+          },
+          fontFamily: {
+            sans: ['Inter', 'system-ui', 'sans-serif']
+          }
+        }
+      }
+    }
+  </script>
+  
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="assets/css/styles.css">
+  
+  <!-- AOS - Animate On Scroll (Local) -->
+  <link href="assets/vendor/aos.css" rel="stylesheet">
+  
+  <!-- Lucide Icons (Local) -->
+  <script src="assets/vendor/lucide.min.js"></script>
+  
+  <!-- Schema.org structured data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "TattoWorld",
+    "description": "Tatuajes a domicilio en Santiago, Chile",
+    "url": "https://tattoworld.github.io",
+    "telephone": "+56912345678",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Santiago",
+      "addressRegion": "RM",
+      "addressCountry": "CL"
+    },
+    "priceRange": "$$"
+  }
+  </script>
+</head>
+<body class="bg-background text-text-primary font-sans">
+  <!-- Skip to main content -->
+  <a href="#main-content" class="skip-link">Saltar al contenido principal</a>
+  
+  <!-- Navbar -->
+  <nav id="navbar" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-transparent">
+    <div class="container mx-auto px-4 md:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-16 md:h-20">
+        <!-- Logo -->
+        <a href="index.html" class="flex items-center gap-2">
+          <span class="text-2xl md:text-3xl font-bold text-accent">Tatto</span>
+          <span class="text-2xl md:text-3xl font-bold text-text-primary">World</span>
+        </a>
+        
+        <!-- Desktop Navigation -->
+        <div class="hidden md:flex items-center gap-8">
+          <a href="index.html" class="nav-link text-accent font-medium">Inicio</a>
+          <a href="pages/servicios.html" class="nav-link text-text-secondary hover:text-accent transition-colors font-medium">Servicios</a>
+          <a href="pages/galeria.html" class="nav-link text-text-secondary hover:text-accent transition-colors font-medium">Galería</a>
+          <a href="pages/contacto.html" class="nav-link text-text-secondary hover:text-accent transition-colors font-medium">Contacto</a>
+          <a href="pages/contacto.html" class="btn btn-primary text-sm">Agendar Cita</a>
+        </div>
+        
+        <!-- Mobile Menu Button -->
+        <button id="mobile-menu-btn" class="md:hidden p-2 text-text-secondary hover:text-accent transition-colors" aria-label="Abrir menú de navegación" aria-expanded="false">
+          <i data-lucide="menu" class="w-6 h-6"></i>
+        </button>
+      </div>
+    </div>
+    
+    <!-- Mobile Navigation -->
+    <div id="mobile-menu" class="md:hidden hidden bg-surface border-t border-border">
+      <div class="container mx-auto px-4 py-4">
+        <div class="flex flex-col gap-4">
+          <a href="index.html" class="nav-link text-accent font-medium py-2">Inicio</a>
+          <a href="pages/servicios.html" class="nav-link text-text-secondary hover:text-accent transition-colors font-medium py-2">Servicios</a>
+          <a href="pages/galeria.html" class="nav-link text-text-secondary hover:text-accent transition-colors font-medium py-2">Galería</a>
+          <a href="pages/contacto.html" class="nav-link text-text-secondary hover:text-accent transition-colors font-medium py-2">Contacto</a>
+          <a href="pages/contacto.html" class="btn btn-primary text-sm mt-2">Agendar Cita</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+  
+  <!-- Main Content -->
+  <main id="main-content">
+    
+    <!-- Hero Section -->
+    <section class="relative min-h-screen flex items-center justify-center overflow-hidden">
+      <!-- Background -->
+      <div class="absolute inset-0 bg-gradient-to-br from-background via-primary to-surface">
+        <div class="absolute inset-0 opacity-20" style="background-image: url('assets/img/gallery/tattoo-1.webp'); background-size: cover; background-position: center;"></div>
+        <div class="absolute inset-0 bg-gradient-to-t from-background via-background/80 to-transparent"></div>
+      </div>
+      
+      <!-- Content -->
+      <div class="container mx-auto px-4 md:px-6 lg:px-8 relative z-10 pt-20">
+        <div class="max-w-4xl mx-auto text-center">
+          <!-- Badge -->
+          <div class="inline-flex items-center gap-2 bg-accent/10 border border-accent/30 rounded-full px-4 py-2 mb-6">
+            <i data-lucide="sparkles" class="w-4 h-4 text-accent"></i>
+            <span class="text-accent text-sm font-medium">Tatuajes a domicilio en Santiago</span>
+          </div>
+          
+          <!-- Heading -->
+          <h1 class="text-4xl md:text-5xl lg:text-7xl font-bold mb-6 leading-tight">
+            Arte en cada tatuaje,
+            <span class="text-accent block md:inline"> higiene en cada paso</span>
+          </h1>
+          
+          <!-- Description -->
+          <p class="text-lg md:text-xl text-text-secondary mb-8 max-w-2xl mx-auto">
+            Recibe un tatuaje profesional sin salir de casa. Trabajo personalizado, 
+            materiales de primera calidad y resultados que superan expectativas.
+          </p>
+          
+          <!-- CTA Buttons -->
+          <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+            <a href="pages/contacto.html" class="btn btn-primary text-lg px-8 py-4">
+              <i data-lucide="calendar" class="w-5 h-5"></i>
+              Agenda tu Cita
+            </a>
+            <a href="pages/galeria.html" class="btn btn-secondary text-lg px-8 py-4">
+              <i data-lucide="image" class="w-5 h-5"></i>
+              Ver Portafolio
+            </a>
+          </div>
+          
+          <!-- Trust signals -->
+          <div class="mt-12 flex flex-wrap items-center justify-center gap-8 text-text-muted">
+            <div class="flex items-center gap-2">
+              <i data-lucide="shield-check" class="w-5 h-5 text-accent"></i>
+              <span class="text-sm">Higiene Certificada</span>
+            </div>
+            <div class="flex items-center gap-2">
+              <i data-lucide="clock" class="w-5 h-5 text-accent"></i>
+              <span class="text-sm">Disponible 7 días</span>
+            </div>
+            <div class="flex items-center gap-2">
+              <i data-lucide="star" class="w-5 h-5 text-accent"></i>
+              <span class="text-sm">+100 trabajos realizados</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Scroll indicator -->
+      <div class="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce">
+        <i data-lucide="chevron-down" class="w-6 h-6 text-text-muted"></i>
+      </div>
+    </section>
+    
+    <!-- Services Preview Section -->
+    <section class="py-16 md:py-24 bg-background">
+      <div class="container mx-auto px-4 md:px-6 lg:px-8">
+        <!-- Section Header -->
+        <div class="text-center mb-12" data-aos="fade-up">
+          <span class="text-accent text-sm font-semibold uppercase tracking-wider">Servicios</span>
+          <h2 class="text-3xl md:text-4xl font-bold mt-2 mb-4">Lo que puedo hacer por ti</h2>
+          <p class="text-text-secondary max-w-2xl mx-auto">Ofrezco una variedad de estilos de tatuaje, todos realizados con los más altos estándares de higiene y calidad.</p>
+        </div>
+        
+        <!-- Services Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <!-- Service Card 1 -->
+          <div class="card group" data-aos="fade-up" data-aos-delay="100">
+            <div class="w-12 h-12 bg-accent/10 rounded-lg flex items-center justify-center mb-4 group-hover:bg-accent/20 transition-colors">
+              <i data-lucide="pen-tool" class="w-6 h-6 text-accent"></i>
+            </div>
+            <h3 class="text-xl font-semibold mb-2">Blackwork</h3>
+            <p class="text-text-secondary mb-4">Diseños geométricos, mandalas y patrones con tinta negra. Arte bold y impactante.</p>
+            <a href="pages/servicios.html" class="text-accent hover:text-accent-hover transition-colors font-medium inline-flex items-center gap-2">
+              Ver más <i data-lucide="arrow-right" class="w-4 h-4"></i>
+            </a>
+          </div>
+          
+          <!-- Service Card 2 -->
+          <div class="card group" data-aos="fade-up" data-aos-delay="200">
+            <div class="w-12 h-12 bg-accent/10 rounded-lg flex items-center justify-center mb-4 group-hover:bg-accent/20 transition-colors">
+              <i data-lucide="eye" class="w-6 h-6 text-accent"></i>
+            </div>
+            <h3 class="text-xl font-semibold mb-2">Realismo</h3>
+            <p class="text-text-secondary mb-4">Retratos, paisajes y elementos hiperrealistas. Detalle y precisión en cada trazo.</p>
+            <a href="pages/servicios.html" class="text-accent hover:text-accent-hover transition-colors font-medium inline-flex items-center gap-2">
+              Ver más <i data-lucide="arrow-right" class="w-4 h-4"></i>
+            </a>
+          </div>
+          
+          <!-- Service Card 3 -->
+          <div class="card group" data-aos="fade-up" data-aos-delay="300">
+            <div class="w-12 h-12 bg-accent/10 rounded-lg flex items-center justify-center mb-4 group-hover:bg-accent/20 transition-colors">
+              <i data-lucide="flower-2" class="w-6 h-6 text-accent"></i>
+            </div>
+            <h3 class="text-xl font-semibold mb-2">Tradicional</h3>
+            <p class="text-text-secondary mb-4">Estilo clásico americano. Colores vibrantes y diseños atemporales que nunca pasan de moda.</p>
+            <a href="pages/servicios.html" class="text-accent hover:text-accent-hover transition-colors font-medium inline-flex items-center gap-2">
+              Ver más <i data-lucide="arrow-right" class="w-4 h-4"></i>
+            </a>
+          </div>
+        </div>
+        
+        <!-- View All Button -->
+        <div class="text-center mt-10" data-aos="fade-up">
+          <a href="pages/servicios.html" class="btn btn-secondary">
+            Ver todos los servicios
+            <i data-lucide="arrow-right" class="w-4 h-4"></i>
+          </a>
+        </div>
+      </div>
+    </section>
+    
+    <!-- Gallery Preview Section -->
+    <section class="py-16 md:py-24 bg-surface">
+      <div class="container mx-auto px-4 md:px-6 lg:px-8">
+        <!-- Section Header -->
+        <div class="text-center mb-12" data-aos="fade-up">
+          <span class="text-accent text-sm font-semibold uppercase tracking-wider">Portafolio</span>
+          <h2 class="text-3xl md:text-4xl font-bold mt-2 mb-4">Trabajos recientes</h2>
+          <p class="text-text-secondary max-w-2xl mx-auto">Explora algunos de mis trabajos más recientes. Cada tatuaje es una historia única.</p>
+        </div>
+        
+        <!-- Gallery Grid -->
+        <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
+          <div class="aspect-square bg-primary rounded-lg overflow-hidden group" data-aos="fade-up" data-aos-delay="100">
+            <img src="assets/img/gallery/tattoo-1.webp" alt="Tatuaje blackwork geométrico" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" loading="lazy">
+          </div>
+          <div class="aspect-square bg-primary rounded-lg overflow-hidden group" data-aos="fade-up" data-aos-delay="200">
+            <img src="assets/img/gallery/tattoo-2.webp" alt="Tatuaje realista" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" loading="lazy">
+          </div>
+          <div class="aspect-square bg-primary rounded-lg overflow-hidden group" data-aos="fade-up" data-aos-delay="300">
+            <img src="assets/img/gallery/tattoo-3.webp" alt="Tatuaje tradicional" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" loading="lazy">
+          </div>
+          <div class="aspect-square bg-primary rounded-lg overflow-hidden group" data-aos="fade-up" data-aos-delay="100">
+            <img src="assets/img/gallery/tattoo-4.webp" alt="Tatuaje fine line" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" loading="lazy">
+          </div>
+          <div class="aspect-square bg-primary rounded-lg overflow-hidden group" data-aos="fade-up" data-aos-delay="200">
+            <img src="assets/img/gallery/tattoo-5.webp" alt="Tatuaje neo-traditional" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" loading="lazy">
+          </div>
+          <div class="aspect-square bg-primary rounded-lg overflow-hidden group" data-aos="fade-up" data-aos-delay="300">
+            <img src="assets/img/gallery/tattoo-6.webp" alt="Tatuaje punk" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" loading="lazy">
+          </div>
+        </div>
+        
+        <!-- View All Button -->
+        <div class="text-center mt-10" data-aos="fade-up">
+          <a href="pages/galeria.html" class="btn btn-secondary">
+            Ver galería completa
+            <i data-lucide="arrow-right" class="w-4 h-4"></i>
+          </a>
+        </div>
+      </div>
+    </section>
+    
+    <!-- How It Works Section -->
+    <section class="py-16 md:py-24 bg-background">
+      <div class="container mx-auto px-4 md:px-6 lg:px-8">
+        <!-- Section Header -->
+        <div class="text-center mb-12" data-aos="fade-up">
+          <span class="text-accent text-sm font-semibold uppercase tracking-wider">Proceso</span>
+          <h2 class="text-3xl md:text-4xl font-bold mt-2 mb-4">¿Cómo funciona?</h2>
+          <p class="text-text-secondary max-w-2xl mx-auto">Un proceso simple y profesional para que tengas el tatuaje que siempre soñaste.</p>
+        </div>
+        
+        <!-- Steps -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <!-- Step 1 -->
+          <div class="text-center" data-aos="fade-up" data-aos-delay="100">
+            <div class="w-16 h-16 bg-accent/10 rounded-full flex items-center justify-center mx-auto mb-4">
+              <span class="text-2xl font-bold text-accent">1</span>
+            </div>
+            <h3 class="text-xl font-semibold mb-2">Contacta</h3>
+            <p class="text-text-secondary">Escríbeme por WhatsApp o llámame para contarme tu idea.</p>
+          </div>
+          
+          <!-- Step 2 -->
+          <div class="text-center" data-aos="fade-up" data-aos-delay="200">
+            <div class="w-16 h-16 bg-accent/10 rounded-full flex items-center justify-center mx-auto mb-4">
+              <span class="text-2xl font-bold text-accent">2</span>
+            </div>
+            <h3 class="text-xl font-semibold mb-2">Diseñamos</h3>
+            <p class="text-text-secondary">Creo un diseño personalizado basado en tu idea y estilo.</p>
+          </div>
+          
+          <!-- Step 3 -->
+          <div class="text-center" data-aos="fade-up" data-aos-delay="300">
+            <div class="w-16 h-16 bg-accent/10 rounded-full flex items-center justify-center mx-auto mb-4">
+              <span class="text-2xl font-bold text-accent">3</span>
+            </div>
+            <h3 class="text-xl font-semibold mb-2">Agendamos</h3>
+            <p class="text-text-secondary">Fijamos fecha y hora que te quede cómoda en tu hogar.</p>
+          </div>
+          
+          <!-- Step 4 -->
+          <div class="text-center" data-aos="fade-up" data-aos-delay="400">
+            <div class="w-16 h-16 bg-accent/10 rounded-full flex items-center justify-center mx-auto mb-4">
+              <span class="text-2xl font-bold text-accent">4</span>
+            </div>
+            <h3 class="text-xl font-semibold mb-2">Tatuamos</h3>
+            <p class="text-text-secondary">Llego a tu domicilio con todo lo necesario para crear tu tatuaje.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <!-- CTA Section -->
+    <section class="py-16 md:py-24 bg-gradient-to-br from-surface via-primary to-background relative overflow-hidden">
+      <div class="absolute inset-0 opacity-10">
+        <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-accent rounded-full blur-3xl"></div>
+      </div>
+      
+      <div class="container mx-auto px-4 md:px-6 lg:px-8 relative z-10">
+        <div class="max-w-4xl mx-auto text-center">
+          <div class="inline-flex items-center gap-2 bg-accent/10 border border-accent/30 rounded-full px-4 py-2 mb-6" data-aos="fade-up">
+            <i data-lucide="sparkles" class="w-4 h-4 text-accent"></i>
+            <span class="text-accent text-sm font-medium">¿Listo para tu próximo tatuaje?</span>
+          </div>
+          
+          <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold mb-6" data-aos="fade-up" data-aos-delay="100">
+            Transforma tu idea en <span class="text-accent">arte permanente</span>
+          </h2>
+          
+          <p class="text-lg md:text-xl text-text-secondary mb-8 max-w-2xl mx-auto" data-aos="fade-up" data-aos-delay="200">
+            Agenda tu cita hoy y recibe un tatuaje profesional en la comodidad de tu hogar.
+          </p>
+          
+          <div class="flex flex-col sm:flex-row items-center justify-center gap-4" data-aos="fade-up" data-aos-delay="300">
+            <a href="pages/contacto.html" class="btn btn-primary text-lg px-8 py-4">
+              <i data-lucide="calendar" class="w-5 h-5"></i>
+              Agenda tu Cita
+            </a>
+            <a id="cta-whatsapp-link" href="#" target="_blank" rel="noopener noreferrer" class="btn btn-secondary text-lg px-8 py-4">
+              <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
+              </svg>
+              Escríbenos por WhatsApp
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  
+  <!-- Footer -->
+  <footer class="bg-surface border-t border-border">
+    <div class="container mx-auto px-4 md:px-6 lg:px-8 py-12 md:py-16">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <!-- Brand Column -->
+        <div class="lg:col-span-2">
+          <a href="index.html" class="flex items-center gap-2 mb-4">
+            <span class="text-2xl font-bold text-accent">Tatto</span>
+            <span class="text-2xl font-bold text-text-primary">World</span>
+          </a>
+          <p class="text-text-secondary mb-6 max-w-md">Tatuajes a domicilio en tu zona. Arte, higiene y profesionalismo directamente en la comodidad de tu hogar.</p>
+          <div class="flex gap-4">
+            <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer" class="p-2 bg-primary rounded-full hover:bg-accent transition-colors" aria-label="Instagram">
+              <i data-lucide="instagram" class="w-5 h-5"></i>
+            </a>
+            <a href="https://www.tiktok.com/" target="_blank" rel="noopener noreferrer" class="p-2 bg-primary rounded-full hover:bg-accent transition-colors" aria-label="TikTok">
+              <i data-lucide="music-2" class="w-5 h-5"></i>
+            </a>
+          </div>
+        </div>
+        
+        <!-- Navigation Column -->
+        <div>
+          <h3 class="text-lg font-semibold mb-4">Navegación</h3>
+          <ul class="space-y-3">
+            <li><a href="index.html" class="text-text-secondary hover:text-accent transition-colors">Inicio</a></li>
+            <li><a href="pages/servicios.html" class="text-text-secondary hover:text-accent transition-colors">Servicios</a></li>
+            <li><a href="pages/galeria.html" class="text-text-secondary hover:text-accent transition-colors">Galería</a></li>
+            <li><a href="pages/contacto.html" class="text-text-secondary hover:text-accent transition-colors">Contacto</a></li>
+          </ul>
+        </div>
+        
+        <!-- Contact Column -->
+        <div>
+          <h3 class="text-lg font-semibold mb-4">Contacto</h3>
+          <ul class="space-y-3">
+            <li class="flex items-center gap-2 text-text-secondary">
+              <i data-lucide="phone" class="w-4 h-4 text-accent"></i>
+              <a id="footer-phone" href="tel:+56912345678">+56 9 1234 5678</a>
+            </li>
+            <li class="flex items-center gap-2 text-text-secondary">
+              <i data-lucide="mail" class="w-4 h-4 text-accent"></i>
+              <a href="mailto:contacto@tattoworld.cl">contacto@tattoworld.cl</a>
+            </li>
+            <li class="flex items-start gap-2 text-text-secondary">
+              <i data-lucide="map-pin" class="w-4 h-4 text-accent mt-1"></i>
+              <span>Santiago, Chile<br>Servicio a domicilio</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+      
+      <!-- Bottom Bar -->
+      <div class="mt-12 pt-8 border-t border-border">
+        <div class="flex flex-col md:flex-row justify-between items-center gap-4">
+          <p class="text-text-muted text-sm">&copy; <span id="current-year"></span> TattoWorld. Todos los derechos reservados.</p>
+          <p class="text-text-muted text-sm">Arte en cada tatuaje, higiene en cada paso.</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+  
+  <!-- WhatsApp Floating Button -->
+  <div id="whatsapp-float" class="fixed bottom-6 right-6 z-50">
+    <a id="whatsapp-link" href="#" target="_blank" rel="noopener noreferrer" class="group flex items-center gap-3" aria-label="Contactar por WhatsApp">
+      <span class="hidden md:block bg-surface text-text-primary px-4 py-2 rounded-lg shadow-lg opacity-0 group-hover:opacity-100 transition-opacity duration-200 whitespace-nowrap text-sm font-medium">¡Escríbenos por WhatsApp!</span>
+      <div class="relative">
+        <span class="absolute inset-0 bg-green-500 rounded-full animate-ping opacity-75"></span>
+        <span class="relative flex items-center justify-center w-14 h-14 bg-green-500 rounded-full shadow-lg hover:bg-green-600 transition-colors duration-200">
+          <svg class="w-7 h-7 text-white" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 1.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
+          </svg>
+        </span>
+      </div>
+    </a>
+  </div>
+  
+  <!-- Scripts -->
+  <script src="assets/vendor/aos.js"></script>
+  <script src="assets/js/config.js"></script>
+  <script src="assets/js/whatsapp.js"></script>
+  <script>
+    // Initialize AOS
+    AOS.init({
+      duration: 600,
+      easing: 'ease-out-cubic',
+      once: true,
+      offset: 50,
+      init: function() {
+        // AOS loaded successfully - remove fallback class
+        document.body.classList.remove('no-aos');
+      }
+    });
+    
+    // Fallback: if AOS doesn't load in 1.5s, make content visible
+    setTimeout(function() {
+      if (typeof AOS === 'undefined' || !AOS.initialized) {
+        document.body.classList.add('no-aos');
+      }
+    }, 1500);
+    
+    // Initialize Lucide Icons
+    lucide.createIcons();
+    
+    // Navbar scroll effect
+    const navbar = document.getElementById('navbar');
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 50) {
+        navbar.classList.add('bg-surface/95', 'backdrop-blur-md', 'shadow-lg');
+        navbar.classList.remove('bg-transparent');
+      } else {
+        navbar.classList.remove('bg-surface/95', 'backdrop-blur-md', 'shadow-lg');
+        navbar.classList.add('bg-transparent');
+      }
+    });
+    
+    // Mobile menu toggle
+    const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+    
+    mobileMenuBtn.addEventListener('click', () => {
+      const isExpanded = mobileMenuBtn.getAttribute('aria-expanded') === 'true';
+      mobileMenuBtn.setAttribute('aria-expanded', !isExpanded);
+      mobileMenu.classList.toggle('hidden');
+      
+      const icon = mobileMenuBtn.querySelector('i');
+      if (isExpanded) {
+        icon.setAttribute('data-lucide', 'menu');
+      } else {
+        icon.setAttribute('data-lucide', 'x');
+      }
+      lucide.createIcons();
+    });
+    
+    // Set current year
+    document.getElementById('current-year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>

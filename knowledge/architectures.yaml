@@ -1,0 +1,133 @@
+# Knowledge Base: Architectural Patterns
+# Architect Agent Reference
+
+architectures:
+
+  - id: static-files
+    name: "Archivos Estáticos Planos"
+    type: "static"
+    description: >
+      Sitio web compuesto exclusivamente de archivos HTML, CSS y JavaScript
+      sin proceso de compilación ni framework estático. Ideal para proyectos
+      pequeños, landing pages y sitios informativos simples.
+    strengths:
+      - "Cero dependencias de build"
+      - "Máxima portabilidad"
+      - "Hosting universal (cualquier servidor estático)"
+      - "Velocidad de desarrollo máxima"
+      - "Sin curva de aprendizaje"
+    weaknesses:
+      - "Sin generación automática de páginas"
+      - "Duplicación de estructura HTML entre páginas"
+      - "Escalabilidad limitada"
+      - "Mantenimiento manual de navegación"
+    recommended_for:
+      - "Landing pages"
+      - "Portafolios personales"
+      - "Sitios de 1-5 páginas"
+      - "Proyectos con presupuesto mínimo"
+    stack:
+      languages: ["HTML5", "CSS3", "JavaScript (vanilla)"]
+      frameworks: []
+      tools: []
+    complexity: low
+
+  - id: jamstack-basic
+    name: "JAMstack Básico (Hugo/Jekyll)"
+    type: "static-generator"
+    description: >
+      Sitio estático generado mediante un generador estático (Hugo, Jekyll,
+      Eleventy). Las páginas se generan a partir de plantillas y datos,
+      produciendo archivos HTML estáticos listos para desplegar.
+    strengths:
+      - "Separación de contenido y presentación"
+      - "Generación automática de páginas"
+      - "SEO óptimo por defecto"
+      - "Rendimiento excelente"
+      - "Escalable para sitios medianos"
+    weaknesses:
+      - "Requiere instalación de herramientas"
+      - "Curva de aprendizaje moderada"
+      - "Build step obligatorio"
+      - "Dependencia de lenguaje de plantillas"
+    recommended_for:
+      - "Blogs"
+      - "Sitios de 5-50 páginas"
+      - "Portafolios con múltiples proyectos"
+      - "Sitios con contenido dinámico que se vuelve estático"
+    stack:
+      languages: ["HTML5", "CSS3", "JavaScript"]
+      frameworks: ["Hugo", "Jekyll", "Eleventy"]
+      tools: ["Git", "Netlify/Vercel"]
+    complexity: medium
+
+  - id: spa-framework
+    name: "SPA con Framework (React/Vue/Next.js)"
+    type: "single-page-application"
+    description: >
+      Aplicación de página única construida con un framework JavaScript
+      moderno. Renderizado en cliente con posibilidad de SSR/SSG.
+    strengths:
+      - "Experiencia de usuario fluida"
+      - "Componentes reutilizables"
+      - "Estado del cliente/manejado"
+      - "Escalabilidad para aplicaciones complejas"
+    weaknesses:
+      - "Sobre-ingeniería para sitios estáticos"
+      - "Mayor bundle size"
+      - "SEO requiere configuración adicional"
+      - "Complejidad innecesaria para proyectos simples"
+    recommended_for:
+      - "Aplicaciones web complejas"
+      - "Dashboards"
+      - "Sitios con interacción intensiva"
+      - "Progressive Web Apps"
+    stack:
+      languages: ["TypeScript", "HTML5", "CSS3"]
+      frameworks: ["React", "Next.js", "Vue", "Nuxt"]
+      tools: ["Node.js", "npm/yarn", "Webpack/Vite"]
+    complexity: high
+
+  - id: spa-vanilla
+    name: "SPA con JavaScript Vanilla"
+    type: "single-page-application"
+    description: >
+      Aplicación de página única construida sin frameworks, usando
+      JavaScript puro con manipulación del DOM y routing manual.
+    strengths:
+      - "Sin dependencias de frameworks"
+      - "Control total del código"
+      - "Rendimiento óptimo"
+    weaknesses:
+      - "Desarrollo manual intensivo"
+      - "Escalabilidad muy limitada"
+      - "Routing manual"
+      - "Testing difícil"
+    recommended_for:
+      - "Micro-interacciones"
+      - "Widget embebidos"
+      - "Prototipos rápidos"
+    stack:
+      languages: ["HTML5", "CSS3", "JavaScript (ES6+)"]
+      frameworks: []
+      tools: []
+    complexity: medium
+
+decision_matrix:
+
+  criteria:
+    - name: "Complejidad del proyecto"
+      weight: 0.25
+    - name: "Requisitos de SEO"
+      weight: 0.20
+    - name: "Escalabilidad futura"
+      weight: 0.15
+    - name: "Velocidad de desarrollo"
+      weight: 0.20
+    - name: "Costo de mantenimiento"
+      weight: 0.10
+    - name: "Experiencia del equipo"
+      weight: 0.10
+
+  scoring:
+    scale: "1-5 (1=malo, 5=excelente)"

@@ -1,0 +1,443 @@
+/**
+ * Global Styles
+ * TattoWorld - Tatuajes a Domicilio
+ * 
+ * Estilos base y variables CSS del design system.
+ */
+
+/* ========================================
+   CSS Variables (Design Tokens)
+   ======================================== */
+:root {
+  /* Colors */
+  --color-primary: #1a1a1a;
+  --color-secondary: #2d2d2d;
+  --color-accent: #c9a227;
+  --color-accent-hover: #b8912a;
+  --color-background: #0d0d0d;
+  --color-surface: #1e1e1e;
+  --color-text-primary: #ffffff;
+  --color-text-secondary: #a3a3a3;
+  --color-text-muted: #666666;
+  --color-border: #333333;
+  --color-success: #22c55e;
+  --color-error: #ef4444;
+  --color-warning: #f59e0b;
+
+  /* Typography */
+  --font-family: 'Inter', system-ui, sans-serif;
+  --font-size-heading-1: 48px;
+  --font-size-heading-2: 36px;
+  --font-size-heading-3: 24px;
+  --font-size-body: 16px;
+  --font-size-body-small: 14px;
+  --font-size-caption: 12px;
+
+  /* Spacing */
+  --spacing-xs: 4px;
+  --spacing-sm: 8px;
+  --spacing-md: 16px;
+  --spacing-lg: 24px;
+  --spacing-xl: 32px;
+  --spacing-2xl: 48px;
+  --spacing-3xl: 64px;
+
+  /* Transitions */
+  --transition-fast: 150ms ease;
+  --transition-normal: 300ms ease;
+  --transition-slow: 500ms ease;
+
+  /* Shadows */
+  --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  --shadow-gold: 0 4px 14px 0 rgba(201, 162, 39, 0.25);
+
+  /* Border Radius */
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-lg: 12px;
+  --radius-xl: 16px;
+  --radius-full: 9999px;
+}
+
+/* ========================================
+   CSS Reset
+   ======================================== */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  font-family: var(--font-family);
+  font-size: var(--font-size-body);
+  line-height: 1.5;
+  color: var(--color-text-primary);
+  background-color: var(--color-background);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+}
+
+input, button, textarea, select {
+  font: inherit;
+  color: inherit;
+}
+
+p, h1, h2, h3, h4, h5, h6 {
+  overflow-wrap: break-word;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+ul, ol {
+  list-style: none;
+}
+
+/* ========================================
+   Typography
+   ======================================== */
+h1, .h1 {
+  font-size: var(--font-size-heading-1);
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+h2, .h2 {
+  font-size: var(--font-size-heading-2);
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+h3, .h3 {
+  font-size: var(--font-size-heading-3);
+  font-weight: 600;
+  line-height: 1.3;
+}
+
+/* ========================================
+   Utility Classes
+   ======================================== */
+.container {
+  width: 100%;
+  max-width: 1280px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: var(--spacing-md);
+  padding-right: var(--spacing-md);
+}
+
+@media (min-width: 768px) {
+  .container {
+    padding-left: var(--spacing-lg);
+    padding-right: var(--spacing-lg);
+  }
+}
+
+@media (min-width: 1024px) {
+  .container {
+    padding-left: var(--spacing-xl);
+    padding-right: var(--spacing-xl);
+  }
+}
+
+/* Accent color utility */
+.text-accent {
+  color: var(--color-accent);
+}
+
+.bg-accent {
+  background-color: var(--color-accent);
+}
+
+.border-accent {
+  border-color: var(--color-accent);
+}
+
+/* Hover effects */
+.hover-gold {
+  transition: all var(--transition-normal);
+}
+
+.hover-gold:hover {
+  color: var(--color-accent-hover);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-gold);
+}
+
+/* Focus styles for accessibility */
+:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 2px;
+}
+
+/* Skip to main content link */
+.skip-link {
+  position: absolute;
+  top: -40px;
+  left: 0;
+  background: var(--color-accent);
+  color: var(--color-background);
+  padding: var(--spacing-sm) var(--spacing-md);
+  z-index: 100;
+  transition: top var(--transition-fast);
+}
+
+.skip-link:focus {
+  top: 0;
+}
+
+/* ========================================
+   Component Base Styles
+   ======================================== */
+
+/* Button base */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--spacing-sm);
+  padding: var(--spacing-md) var(--spacing-lg);
+  font-size: var(--font-size-body);
+  font-weight: 600;
+  border-radius: var(--radius-md);
+  transition: all var(--transition-normal);
+  cursor: pointer;
+  border: none;
+}
+
+.btn-primary {
+  background-color: var(--color-accent);
+  color: var(--color-background);
+}
+
+.btn-primary:hover {
+  background-color: var(--color-accent-hover);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-gold);
+}
+
+.btn-secondary {
+  background-color: transparent;
+  color: var(--color-accent);
+  border: 2px solid var(--color-accent);
+}
+
+.btn-secondary:hover {
+  background-color: var(--color-accent);
+  color: var(--color-background);
+}
+
+/* Card base */
+.card {
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  padding: var(--spacing-lg);
+  transition: all var(--transition-normal);
+}
+
+.card:hover {
+  border-color: var(--color-accent);
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-gold);
+}
+
+/* Section spacing */
+.section {
+  padding-top: var(--spacing-3xl);
+  padding-bottom: var(--spacing-3xl);
+}
+
+@media (min-width: 768px) {
+  .section {
+    padding-top: 96px;
+    padding-bottom: 96px;
+  }
+}
+
+/* ========================================
+   Animations (AOS fallback)
+   ======================================== */
+[data-aos] {
+  opacity: 0;
+  transition-property: opacity, transform;
+}
+
+[data-aos].aos-animate {
+  opacity: 1;
+}
+
+[data-aos="fade-up"] {
+  transform: translateY(30px);
+}
+
+[data-aos="fade-up"].aos-animate {
+  transform: translateY(0);
+}
+
+/* ========================================
+   AOS Fallback - Si AOS no carga, 
+   hacer visible el contenido después de 1.5s
+   ======================================== */
+@keyframes fadeInFallback {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Si AOS no inicializa, hacer visible todo */
+.no-aos [data-aos] {
+  opacity: 1 !important;
+  transform: none !important;
+  animation: fadeInFallback 0.5s ease-out forwards;
+}
+
+/* Seguridad máxima: visible después de 3s siempre */
+@media (prefers-reduced-motion: no-preference) {
+  [data-aos]:not(.aos-animate) {
+    animation: fadeInFallback 0.5s ease-out forwards;
+    animation-delay: 1.5s;
+  }
+}
+
+/* ========================================
+   WhatsApp Button - Fixed Size (no depende de Tailwind)
+   ======================================== */
+#whatsapp-float {
+  position: fixed !important;
+  bottom: 24px !important;
+  right: 24px !important;
+  z-index: 50 !important;
+}
+
+#whatsapp-float > a {
+  display: flex !important;
+  align-items: center !important;
+  gap: 12px !important;
+  text-decoration: none !important;
+}
+
+#whatsapp-float .relative {
+  position: relative !important;
+  width: 56px !important;
+  height: 56px !important;
+  flex-shrink: 0 !important;
+}
+
+#whatsapp-float svg {
+  width: 28px !important;
+  height: 28px !important;
+  color: white !important;
+  display: block !important;
+  flex-shrink: 0 !important;
+}
+
+/* Animated ping circle */
+#whatsapp-float .animate-ping {
+  position: absolute !important;
+  top: 0 !important;
+  left: 0 !important;
+  right: 0 !important;
+  bottom: 0 !important;
+  border-radius: 9999px !important;
+  background-color: rgb(34, 197, 94) !important;
+  opacity: 0.75 !important;
+  animation: whatsapp-ping 1s cubic-bezier(0, 0, 0.2, 1) infinite !important;
+}
+
+/* Main button circle */
+#whatsapp-float > a > .relative > span:last-child {
+  position: relative !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  width: 56px !important;
+  height: 56px !important;
+  background-color: rgb(34, 197, 94) !important;
+  border-radius: 9999px !important;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05) !important;
+  transition: background-color 0.2s !important;
+  cursor: pointer !important;
+}
+
+#whatsapp-float > a > .relative > span:last-child:hover {
+  background-color: rgb(22, 163, 74) !important;
+}
+
+/* WhatsApp hover text label */
+#whatsapp-float .hidden {
+  display: none !important;
+}
+
+@media (min-width: 768px) {
+  #whatsapp-float .hidden {
+    display: block !important;
+    background-color: var(--color-surface) !important;
+    color: var(--color-text-primary) !important;
+    padding: 8px 16px !important;
+    border-radius: 8px !important;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1) !important;
+    white-space: nowrap !important;
+    font-size: 14px !important;
+    font-weight: 500 !important;
+    opacity: 0 !important;
+    transition: opacity 0.2s !important;
+  }
+
+  #whatsapp-float > a:hover .hidden {
+    opacity: 1 !important;
+  }
+}
+
+/* Ping animation keyframe */
+@keyframes whatsapp-ping {
+  75%, 100% {
+    transform: scale(2);
+    opacity: 0;
+  }
+}
+
+/* ========================================
+    Responsive Utilities
+   ======================================== */
+.hide-mobile {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .hide-mobile {
+    display: block;
+  }
+  .hide-desktop {
+    display: none;
+  }
+}
+
+/* ========================================
+   Print Styles
+   ======================================== */
+@media print {
+  body {
+    background: white;
+    color: black;
+  }
+  
+  .no-print {
+    display: none !important;
+  }
+}

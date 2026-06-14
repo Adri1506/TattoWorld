@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Contacto - TattoWorld | Agenda tu Cita</title>
+  <meta name="description" content="Contacta con TattoWorld para agendar tu tatuaje a domicilio. WhatsApp, formulario de contacto y más.">
+  <meta name="keywords" content="contacto tatuador, agendar cita tatuaje, WhatsApp tatuaje, Santiago">
+  
+  <meta property="og:title" content="Contacto - TattoWorld">
+  <meta property="og:description" content="Agenda tu cita de tatuaje a domicilio">
+  <meta property="og:image" content="../assets/img/og-image.jpg">
+  
+  <link rel="icon" type="image/x-icon" href="../assets/img/icons/favicon.ico">
+  <link rel="stylesheet" href="../assets/vendor/fonts.css">
+  
+  <script src="../assets/vendor/tailwind.js"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: '#1a1a1a', secondary: '#2d2d2d', accent: '#c9a227', 'accent-hover': '#b8912a',
+            background: '#0d0d0d', surface: '#1e1e1e', 'text-primary': '#ffffff',
+            'text-secondary': '#a3a3a3', 'text-muted': '#666666', border: '#333333'
+          },
+          fontFamily: { sans: ['Inter', 'system-ui', 'sans-serif'] }
+        }
+      }
+    }
+  </script>
+  
+  <link rel="stylesheet" href="../assets/css/styles.css">
+  <link href="../assets/vendor/aos.css" rel="stylesheet">
+  <script src="../assets/vendor/lucide.min.js"></script>
+</head>
+<body class="bg-background text-text-primary font-sans">
+  <a href="#main-content" class="skip-link">Saltar al contenido principal</a>
+  
+  <!-- Navbar -->
+  <nav id="navbar" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-surface/95 backdrop-blur-md shadow-lg">
+    <div class="container mx-auto px-4 md:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-16 md:h-20">
+        <a href="../index.html" class="flex items-center gap-2">
+          <span class="text-2xl md:text-3xl font-bold text-accent">Tatto</span>
+          <span class="text-2xl md:text-3xl font-bold text-text-primary">World</span>
+        </a>
+        <div class="hidden md:flex items-center gap-8">
+          <a href="../index.html" class="nav-link text-text-secondary hover:text-accent transition-colors font-medium">Inicio</a>
+          <a href="servicios.html" class="nav-link text-text-secondary hover:text-accent transition-colors font-medium">Servicios</a>
+          <a href="galeria.html" class="nav-link text-text-secondary hover:text-accent transition-colors font-medium">Galería</a>
+          <a href="contacto.html" class="nav-link text-accent font-medium">Contacto</a>
+          <a href="contacto.html" class="btn btn-primary text-sm">Agendar Cita</a>
+        </div>
+        <button id="mobile-menu-btn" class="md:hidden p-2 text-text-secondary hover:text-accent" aria-label="Abrir menú" aria-expanded="false">
+          <i data-lucide="menu" class="w-6 h-6"></i>
+        </button>
+      </div>
+    </div>
+    <div id="mobile-menu" class="md:hidden hidden bg-surface border-t border-border">
+      <div class="container mx-auto px-4 py-4 flex flex-col gap-4">
+        <a href="../index.html" class="text-text-secondary hover:text-accent font-medium py-2">Inicio</a>
+        <a href="servicios.html" class="text-text-secondary hover:text-accent font-medium py-2">Servicios</a>
+        <a href="galeria.html" class="text-text-secondary hover:text-accent font-medium py-2">Galería</a>
+        <a href="contacto.html" class="text-accent font-medium py-2">Contacto</a>
+      </div>
+    </div>
+  </nav>
+  
+  <main id="main-content">
+    <!-- Page Header -->
+    <section class="relative py-16 md:py-24 bg-surface overflow-hidden">
+      <div class="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-transparent via-accent to-transparent"></div>
+      <div class="container mx-auto px-4 md:px-6 lg:px-8 relative z-10">
+        <div class="max-w-3xl mx-auto text-center">
+          <nav class="mb-6" aria-label="Breadcrumb">
+            <ol class="flex items-center justify-center gap-2 text-sm text-text-muted">
+              <li><a href="../index.html" class="hover:text-accent transition-colors">Inicio</a></li>
+              <li aria-hidden="true">/</li>
+              <li class="text-accent" aria-current="page">Contacto</li>
+            </ol>
+          </nav>
+          <h1 class="text-3xl md:text-4xl lg:text-5xl font-bold mb-4" data-aos="fade-up">Contacto</h1>
+          <p class="text-lg md:text-xl text-text-secondary" data-aos="fade-up" data-aos-delay="100">¿Listo para tu próximo tatuaje? Contáctame y hagamos realidad tu idea.</p>
+        </div>
+      </div>
+    </section>
+    
+    <!-- Contact Section -->
+    <section class="py-16 md:py-24 bg-background">
+      <div class="container mx-auto px-4 md:px-6 lg:px-8">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+          
+          <!-- Contact Form -->
+          <div data-aos="fade-up">
+            <h2 class="text-2xl font-bold mb-6">Envíame un mensaje</h2>
+            <form id="contact-form" action="https://formspree.io/f/xzzpbkgn" method="POST" class="space-y-6">
+              <div>
+                <label for="name" class="block text-sm font-medium mb-2">Nombre *</label>
+                <input type="text" id="name" name="name" required class="w-full px-4 py-3 bg-surface border border-border rounded-lg focus:border-accent focus:outline-none transition-colors" placeholder="Tu nombre">
+              </div>
+              
+              <div>
+                <label for="email" class="block text-sm font-medium mb-2">Email *</label>
+                <input type="email" id="email" name="email" required class="w-full px-4 py-3 bg-surface border border-border rounded-lg focus:border-accent focus:outline-none transition-colors" placeholder="tu@email.com">
+              </div>
+              
+              <div>
+                <label for="phone" class="block text-sm font-medium mb-2">Teléfono</label>
+                <input type="tel" id="phone" name="phone" class="w-full px-4 py-3 bg-surface border border-border rounded-lg focus:border-accent focus:outline-none transition-colors" placeholder="+56 9 1234 5678">
+              </div>
+              
+              <div>
+                <label for="service" class="block text-sm font-medium mb-2">Servicio de interés</label>
+                <select id="service" name="service" class="w-full px-4 py-3 bg-surface border border-border rounded-lg focus:border-accent focus:outline-none transition-colors">
+                  <option value="">Selecciona un servicio</option>
+                  <option value="blackwork">Blackwork</option>
+                  <option value="realismo">Realismo</option>
+                  <option value="tradicional">Tradicional</option>
+                  <option value="fine-line">Fine Line</option>
+                  <option value="neo-tradicional">Neo-Traditional</option>
+                  <option value="punk">Punk</option>
+                  <option value="otro">Otro</option>
+                </select>
+              </div>
+              
+              <div>
+                <label for="message" class="block text-sm font-medium mb-2">Mensaje *</label>
+                <textarea id="message" name="message" required rows="5" class="w-full px-4 py-3 bg-surface border border-border rounded-lg focus:border-accent focus:outline-none transition-colors resize-none" placeholder="Cuéntame sobre tu idea de tatuaje..."></textarea>
+              </div>
+              
+              <!-- CAPTCHA -->
+              <div id="captcha-container"></div>
+              
+              <!-- Rate limit info -->
+              <p class="text-xs text-text-muted">Máximo 3 envíos por hora.</p>
+              
+              <!-- Privacy policy -->
+              <p class="text-xs text-text-muted">
+                Al enviar este formulario, aceptas nuestra 
+                <a href="politica-privacidad.html" target="_blank" class="text-accent hover:text-accent-hover underline">política de privacidad</a>.
+              </p>
+              
+              <button type="submit" class="w-full btn btn-primary text-lg py-4">
+                <i data-lucide="send" class="w-5 h-5"></i>
+                <span id="submit-text">Enviar Mensaje</span>
+                <span id="submit-loading" class="hidden">
+                  <svg class="animate-spin h-5 w-5" viewBox="0 0 24 24"><circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4" fill="none"></circle><path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path></svg>
+                  Enviando...
+                </span>
+              </button>
+              
+              <!-- Form Messages -->
+              <div id="form-success" class="hidden p-4 bg-success/10 border border-success/30 rounded-lg text-success">
+                <div class="flex items-center gap-2">
+                  <i data-lucide="check-circle" class="w-5 h-5"></i>
+                  <span>¡Mensaje enviado correctamente! Te responderé pronto.</span>
+                </div>
+              </div>
+              
+              <div id="form-error" class="hidden p-4 bg-error/10 border border-error/30 rounded-lg text-error">
+                <div class="flex items-center gap-2">
+                  <i data-lucide="alert-circle" class="w-5 h-5"></i>
+                  <span>Hubo un error al enviar. Por favor, intenta de nuevo o contáctame por WhatsApp.</span>
+                </div>
+              </div>
+            </form>
+          </div>
+          
+          <!-- Contact Info -->
+          <div class="space-y-8" data-aos="fade-up" data-aos-delay="100">
+            <!-- WhatsApp Card -->
+            <div class="card bg-gradient-to-br from-green-500/10 to-green-500/5 border-green-500/30">
+              <div class="flex items-start gap-4">
+                <div class="w-12 h-12 bg-green-500/20 rounded-lg flex items-center justify-center flex-shrink-0">
+                  <svg class="w-6 h-6 text-green-500" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+                </div>
+                <div class="flex-1">
+                  <h3 class="text-xl font-semibold mb-2">WhatsApp</h3>
+                  <p class="text-text-secondary mb-4">La forma más rápida de contactarme. Respuesta inmediata.</p>
+                  <a id="contacto-whatsapp-btn" href="#" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 bg-green-500 text-white px-6 py-3 rounded-lg font-medium hover:bg-green-600 transition-colors">
+                    <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+                    Abrir WhatsApp
+                  </a>
+                </div>
+              </div>
+            </div>
+            
+            <!-- Contact Info Cards -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <div class="card">
+                <div class="flex items-center gap-3">
+                  <div class="w-10 h-10 bg-accent/10 rounded-lg flex items-center justify-center">
+                    <i data-lucide="phone" class="w-5 h-5 text-accent"></i>
+                  </div>
+                  <div>
+                    <p class="text-sm text-text-muted">Teléfono</p>
+                    <a id="contacto-phone" href="tel:+56912345678" class="font-medium hover:text-accent transition-colors">+56 9 1234 5678</a>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="card">
+                <div class="flex items-center gap-3">
+                  <div class="w-10 h-10 bg-accent/10 rounded-lg flex items-center justify-center">
+                    <i data-lucide="mail" class="w-5 h-5 text-accent"></i>
+                  </div>
+                  <div>
+                    <p class="text-sm text-text-muted">Email</p>
+                    <a href="mailto:contacto@tattoworld.cl" class="font-medium hover:text-accent transition-colors">contacto@tattoworld.cl</a>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="card">
+                <div class="flex items-center gap-3">
+                  <div class="w-10 h-10 bg-accent/10 rounded-lg flex items-center justify-center">
+                    <i data-lucide="clock" class="w-5 h-5 text-accent"></i>
+                  </div>
+                  <div>
+                    <p class="text-sm text-text-muted">Horario</p>
+                    <p class="font-medium">Lun - Dom: 10:00 - 20:00</p>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="card">
+                <div class="flex items-center gap-3">
+                  <div class="w-10 h-10 bg-accent/10 rounded-lg flex items-center justify-center">
+                    <i data-lucide="map-pin" class="w-5 h-5 text-accent"></i>
+                  </div>
+                  <div>
+                    <p class="text-sm text-text-muted">Zona</p>
+                    <p class="font-medium">Santiago, Chile</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <!-- FAQ -->
+            <div class="card">
+              <h3 class="text-lg font-semibold mb-4">Preguntas Frecuentes</h3>
+              <div class="space-y-4">
+                <div>
+                  <h4 class="font-medium text-accent mb-1">¿Cómo agendo una cita?</h4>
+                  <p class="text-sm text-text-secondary">Escríbeme por WhatsApp o llámame. Conversamos sobre tu idea y fijamos fecha.</p>
+                </div>
+                <div>
+                  <h4 class="font-medium text-accent mb-1">¿Cuánto cuesta?</h4>
+                  <p class="text-sm text-text-secondary">Depende del tamaño y complejidad. Consulta nuestra sección de servicios.</p>
+                </div>
+                <div>
+                  <h4 class="font-medium text-accent mb-1">¿Qué incluye el servicio?</h4>
+                  <p class="text-sm text-text-secondary">Diseño personalizado, materiales de primera calidad, higiene certificada y cuidados posteriores.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  
+  <!-- Footer -->
+  <footer class="bg-surface border-t border-border">
+    <div class="container mx-auto px-4 md:px-6 lg:px-8 py-12">
+      <div class="flex flex-col md:flex-row justify-between items-center gap-4">
+        <a href="../index.html" class="flex items-center gap-2">
+          <span class="text-xl font-bold text-accent">Tatto</span>
+          <span class="text-xl font-bold">World</span>
+        </a>
+        <p class="text-text-muted text-sm">&copy; 2026 TattoWorld. Todos los derechos reservados.</p>
+      </div>
+    </div>
+  </footer>
+  
+  <!-- WhatsApp Button -->
+  <div class="fixed bottom-6 right-6 z-40">
+    <a id="whatsapp-link" href="#" target="_blank" rel="noopener noreferrer" class="group flex items-center gap-3" aria-label="Contactar por WhatsApp">
+      <span class="hidden md:block bg-surface text-text-primary px-4 py-2 rounded-lg shadow-lg opacity-0 group-hover:opacity-100 transition-opacity text-sm font-medium">¡Escríbenos!</span>
+      <div class="relative">
+        <span class="absolute inset-0 bg-green-500 rounded-full animate-ping opacity-75"></span>
+        <span class="relative flex items-center justify-center w-14 h-14 bg-green-500 rounded-full shadow-lg hover:bg-green-600 transition-colors">
+          <svg class="w-7 h-7 text-white" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+        </span>
+      </div>
+    </a>
+  </div>
+  
+  <script src="../assets/vendor/aos.js"></script>
+  <script src="../assets/js/config.js"></script>
+  <script src="../assets/js/whatsapp.js"></script>
+  <script>
+    AOS.init({ duration: 600, easing: 'ease-out-cubic', once: true, offset: 50 });
+    lucide.createIcons();
+    
+    // Mobile menu
+    const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+    mobileMenuBtn.addEventListener('click', () => {
+      const isExpanded = mobileMenuBtn.getAttribute('aria-expanded') === 'true';
+      mobileMenuBtn.setAttribute('aria-expanded', !isExpanded);
+      mobileMenu.classList.toggle('hidden');
+      const icon = mobileMenuBtn.querySelector('i');
+      icon.setAttribute('data-lucide', isExpanded ? 'menu' : 'x');
+      lucide.createIcons();
+    });
+    
+    // Contact form
+    const form = document.getElementById('contact-form');
+    const submitText = document.getElementById('submit-text');
+    const submitLoading = document.getElementById('submit-loading');
+    const formSuccess = document.getElementById('form-success');
+    const formError = document.getElementById('form-error');
+    
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      
+      submitText.classList.add('hidden');
+      submitLoading.classList.remove('hidden');
+      formSuccess.classList.add('hidden');
+      formError.classList.add('hidden');
+      
+      try {
+        const response = await fetch(form.action, {
+          method: 'POST',
+          body: new FormData(form),
+          headers: { 'Accept': 'application/json' }
+        });
+        
+        if (response.ok) {
+          formSuccess.classList.remove('hidden');
+          form.reset();
+        } else {
+          throw new Error('Error en el envío');
+        }
+      } catch (error) {
+        formError.classList.remove('hidden');
+      } finally {
+        submitText.classList.remove('hidden');
+        submitLoading.classList.add('hidden');
+      }
+    });
+  </script>
+</body>
+</html>

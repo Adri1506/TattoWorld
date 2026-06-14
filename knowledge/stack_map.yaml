@@ -1,0 +1,326 @@
+# Knowledge Base: Technology Stack Map
+# Architect Agent Reference
+
+stack_map:
+
+  languages:
+    html5:
+      name: "HTML5"
+      version: "5.3"
+      type: "markup"
+      status: "stable"
+      use_case: "Estructura de contenido web"
+      compatibility: universal
+      recommended: true
+
+    css3:
+      name: "CSS3"
+      version: "3.0"
+      type: "style"
+      status: "stable"
+      use_case: "Estilos y diseño visual"
+      compatibility: universal
+      recommended: true
+
+    javascript:
+      name: "JavaScript (ES6+)"
+      version: "ES2024"
+      type: "programming"
+      status: "stable"
+      use_case: "Interactividad y lógica del cliente"
+      compatibility: universal
+      recommended: true
+
+    typescript:
+      name: "TypeScript"
+      version: "5.4"
+      type: "programming"
+      status: "stable"
+      use_case: "JavaScript tipado para proyectos medianos/grandes"
+      compatibility: universal
+      recommended: false
+      note: "No necesario para sitio estático simple"
+
+  frameworks:
+    hugo:
+      name: "Hugo"
+      version: "0.125.0"
+      type: "static-site-generator"
+      status: "active"
+      language: "Go"
+      strengths:
+        - "Extremadamente rápido (build < 1s)"
+        - "Sin dependencias de runtime"
+        - "Plantillas Go potentes"
+        - "Hugo Pipes para assets"
+      weaknesses:
+        - "Sintaxis de plantillas menos intuitiva"
+        - "Ecosistema de themes menor que Jekyll"
+      recommended_for: static-sites
+      install: "https://gohugo.io/installation/"
+
+    jekyll:
+      name: "Jekyll"
+      version: "4.3"
+      type: "static-site-generator"
+      status: "active"
+      language: "Ruby"
+      strengths:
+        - "Integración nativa con GitHub Pages"
+        - "Amplia comunidad"
+        - "Themes abundantes"
+        - "Liquid templates populares"
+      weaknesses:
+        - "Requiere Ruby instalado"
+        - "Build más lento que Hugo"
+      recommended_for: blogs
+      install: "gem install jekyll bundler"
+
+    eleventy:
+      name: "Eleventy (11ty)"
+      version: "3.0"
+      type: "static-site-generator"
+      status: "active"
+      language: "JavaScript"
+      strengths:
+        - "Flexibilidad de plantillas"
+        - "JavaScript native"
+        - "Configuración simple"
+        - "Plugin system elegante"
+      weaknesses:
+        - "Comunidad más pequeña"
+        - "Menos themes pre-construidos"
+      recommended_for: static-sites
+      install: "npm install -g @11ty/eleventy"
+
+    nextjs:
+      name: "Next.js"
+      version: "14.2"
+      type: "meta-framework"
+      status: "active"
+      language: "TypeScript/JavaScript"
+      strengths:
+        - "SSR/SSG/ISR"
+        - "App Router moderno"
+        - "API Routes"
+        - "Optimización automática"
+      weaknesses:
+        - "Sobre-ingeniería para sitios estáticos"
+        - "Requiere Node.js"
+        - "Complejidad innecesaria para proyectos simples"
+      recommended_for: complex-apps
+      install: "npx create-next-app"
+
+    vanilla-js:
+      name: "JavaScript Vanilla"
+      version: "ES2024"
+      type: "language"
+      status: "stable"
+      strengths:
+        - "Sin dependencias"
+        - "Control total"
+        - "Rendimiento óptimo"
+      weaknesses:
+        - "Desarrollo manual"
+        - "Escalabilidad limitada"
+      recommended_for: simple-sites
+
+  css:
+    tailwindcss:
+      name: "Tailwind CSS"
+      version: "3.4"
+      type: "utility-framework"
+      status: "active"
+      strengths:
+        - "Desarrollo rápido"
+        - "Diseño responsive fácil"
+        - "Sin sobreescribir estilos"
+        - "Bundle pequeño con purge"
+      weaknesses:
+        - "HTML con muchas clases"
+        - "Curva de aprendizaje inicial"
+      recommended_for: modern-sites
+
+    bootstrap:
+      name: "Bootstrap"
+      version: "5.3"
+      type: "component-framework"
+      status: "active"
+      strengths:
+        - "Componentes pre-construidos"
+        - "Documentación excelente"
+        - "Amplia comunidad"
+      weaknesses:
+        - "Look and feel genérico"
+        - "Bundle más grande"
+        - "Personalización limitada"
+      recommended_for: rapid-prototyping
+
+    vanilla-css:
+      name: "CSS Vanilla/Custom"
+      version: "3.0"
+      type: "language"
+      status: "stable"
+      strengths:
+        - "Control total"
+        - "Sin dependencias"
+        - "Aprendizaje fundamental"
+      weaknesses:
+        - "Desarrollo más lento"
+        - "Repetición de código"
+      recommended_for: learning/small-projects
+
+  tools:
+    git:
+      name: "Git"
+      version: "2.x"
+      type: "version-control"
+      status: "stable"
+      recommended: true
+
+    github-pages:
+      name: "GitHub Pages"
+      type: "hosting"
+      status: "active"
+      free_tier: true
+      custom_domain: true
+      ssl: true
+      recommended_for: static-sites
+
+    netlify:
+      name: "Netlify"
+      type: "hosting"
+      status: "active"
+      free_tier: true
+      custom_domain: true
+      ssl: true
+      features: ["Forms", "Serverless Functions", "Split Testing"]
+      recommended_for: jamstack
+
+    vercel:
+      name: "Vercel"
+      type: "hosting"
+      status: "active"
+      free_tier: true
+      custom_domain: true
+      ssl: true
+      features: ["Edge Functions", "Analytics", "Preview Deployments"]
+      recommended_for: nextjs
+
+    cloudflare-pages:
+      name: "Cloudflare Pages"
+      type: "hosting"
+      status: "active"
+      free_tier: true
+      custom_domain: true
+      ssl: true
+      features: ["CDN global", "Workers", "KV Storage"]
+      recommended_for: performance
+
+  image_optimization:
+    squoosh:
+      name: "Squoosh"
+      type: "image-optimizer"
+      status: "active"
+      recommended: true
+
+    sharp:
+      name: "Sharp"
+      type: "image-processor"
+      status: "active"
+      recommended_for: build-pipelines
+
+  fonts:
+    google_fonts:
+      name: "Google Fonts"
+      type: "font-service"
+      status: "active"
+      recommended: true
+
+    local_fonts:
+      name: "Self-hosted Fonts"
+      type: "fonts"
+      status: "stable"
+      recommended_for: performance
+
+  icons:
+    fontawesome:
+      name: "Font Awesome"
+      version: "6.5"
+      type: "icon-library"
+      status: "active"
+
+    lucide:
+      name: "Lucide Icons"
+      type: "icon-library"
+      status: "active"
+
+    heroicons:
+      name: "Heroicons"
+      type: "icon-library"
+      status: "active"
+
+  animations:
+    css_animations:
+      name: "CSS Animations/Transitions"
+      type: "animation"
+      status: "stable"
+      recommended: true
+
+    aos:
+      name: "AOS (Animate On Scroll)"
+      version: "2.3"
+      type: "scroll-animation"
+      status: "active"
+      lightweight: true
+
+    gsap:
+      name: "GSAP"
+      version: "3.12"
+      type: "animation-library"
+      status: "active"
+      recommended_for: complex-animations
+
+  seo:
+    meta_tags:
+      name: "HTML Meta Tags"
+      type: "seo"
+      recommended: true
+
+    open_graph:
+      name: "Open Graph Protocol"
+      type: "social-media"
+      recommended: true
+
+    json_ld:
+      name: "JSON-LD Structured Data"
+      type: "structured-data"
+      recommended_for: local-business
+
+  forms:
+    formspree:
+      name: "Formspree"
+      type: "form-backend"
+      status: "active"
+      free_tier: true
+      recommended_for: static-sites
+
+    netlify_forms:
+      name: "Netlify Forms"
+      type: "form-backend"
+      status: "active"
+      recommended_for: netlify
+
+  analytics:
+    google_analytics:
+      name: "Google Analytics"
+      type: "analytics"
+      status: "active"
+      recommended_for: seo-tracking
+
+    plausible:
+      name: "Plausible Analytics"
+      type: "analytics"
+      status: "active"
+      privacy_friendly: true
+      recommended_for: privacy-focused

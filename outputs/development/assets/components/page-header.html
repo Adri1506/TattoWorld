@@ -1,0 +1,75 @@
+<!-- Page Header Component -->
+<section class="relative py-16 md:py-24 bg-surface overflow-hidden">
+  <!-- Background Pattern -->
+  <div class="absolute inset-0 opacity-5">
+    <div class="absolute inset-0" style="background-image: url('data:image/svg+xml,%3Csvg width=\"60\" height=\"60\" viewBox=\"0 0 60 60\" xmlns=\"http://www.w3.org/2000/svg\"%3E%3Cg fill=\"none\" fill-rule=\"evenodd\"%3E%3Cg fill=\"%23c9a227\" fill-opacity=\"1\"%3E%3Cpath d=\"M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z\"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E');"></div>
+  </div>
+  
+  <!-- Gold accent line -->
+  <div class="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-transparent via-accent to-transparent"></div>
+  
+  <div class="container mx-auto px-4 md:px-6 lg:px-8 relative z-10">
+    <div class="max-w-3xl mx-auto text-center">
+      <!-- Breadcrumb (optional) -->
+      <nav id="breadcrumb" class="mb-6" aria-label="Breadcrumb">
+        <ol class="flex items-center justify-center gap-2 text-sm text-text-muted">
+          <li>
+            <a href="index.html" class="hover:text-accent transition-colors">Inicio</a>
+          </li>
+          <li aria-hidden="true">/</li>
+          <li id="breadcrumb-current" class="text-accent" aria-current="page"></li>
+        </ol>
+      </nav>
+      
+      <!-- Title -->
+      <h1 id="page-title" class="text-3xl md:text-4xl lg:text-5xl font-bold mb-4" data-aos="fade-up">
+        <!-- Title will be injected by JavaScript -->
+      </h1>
+      
+      <!-- Description -->
+      <p id="page-description" class="text-lg md:text-xl text-text-secondary" data-aos="fade-up" data-aos-delay="100">
+        <!-- Description will be injected by JavaScript -->
+      </p>
+    </div>
+  </div>
+  
+  <!-- Decorative elements -->
+  <div class="absolute bottom-0 left-0 w-32 h-32 bg-accent/10 rounded-full -translate-x-1/2 translate-y-1/2"></div>
+  <div class="absolute top-0 right-0 w-24 h-24 bg-accent/10 rounded-full translate-x-1/2 -translate-y-1/2"></div>
+</section>
+
+<script>
+  // Page header configuration
+  const pageHeaders = {
+    servicios: {
+      title: 'Servicios',
+      description: 'Ofrezco servicios de tatuaje profesional a domicilio. Calidad, higiene y creatividad en cada trabajo.',
+      breadcrumb: 'Servicios'
+    },
+    galeria: {
+      title: 'Galería',
+      description: 'Explora mi portafolio de trabajos realizados. Cada tatuaje es una obra única y personalizada.',
+      breadcrumb: 'Galería'
+    },
+    contacto: {
+      title: 'Contacto',
+      description: '¿Listo para tu próximo tatuaje? Contáctame y hagamos realidad tu idea.',
+      breadcrumb: 'Contacto'
+    }
+  };
+  
+  // Get current page
+  const currentPage = window.location.pathname.split('/').pop() || 'index.html';
+  let pageKey = 'servicios';
+  
+  if (currentPage.includes('galeria')) pageKey = 'galeria';
+  else if (currentPage.includes('contacto')) pageKey = 'contacto';
+  
+  // Set page header content
+  const config = pageHeaders[pageKey];
+  if (config) {
+    document.getElementById('page-title').textContent = config.title;
+    document.getElementById('page-description').textContent = config.description;
+    document.getElementById('breadcrumb-current').textContent = config.breadcrumb;
+  }
+</script>

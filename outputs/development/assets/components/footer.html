@@ -1,0 +1,93 @@
+<!-- Footer Component -->
+<footer class="bg-surface border-t border-border">
+  <div class="container mx-auto px-4 md:px-6 lg:px-8 py-12 md:py-16">
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+      
+      <!-- Brand Column -->
+      <div class="lg:col-span-2">
+        <a href="index.html" class="flex items-center gap-2 mb-4">
+          <span class="text-2xl font-bold text-accent">Tatto</span>
+          <span class="text-2xl font-bold text-text-primary">World</span>
+        </a>
+        <p class="text-text-secondary mb-6 max-w-md">
+          Tatuajes a domicilio en tu zona. Arte, higiene y profesionalismo 
+          directamente en la comodidad de tu hogar.
+        </p>
+        <div class="flex gap-4">
+          <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer" class="p-2 bg-primary rounded-full hover:bg-accent transition-colors" aria-label="Instagram">
+            <i data-lucide="instagram" class="w-5 h-5"></i>
+          </a>
+          <a href="https://www.tiktok.com/" target="_blank" rel="noopener noreferrer" class="p-2 bg-primary rounded-full hover:bg-accent transition-colors" aria-label="TikTok">
+            <i data-lucide="music-2" class="w-5 h-5"></i>
+          </a>
+          <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer" class="p-2 bg-primary rounded-full hover:bg-accent transition-colors" aria-label="Facebook">
+            <i data-lucide="facebook" class="w-5 h-5"></i>
+          </a>
+        </div>
+      </div>
+      
+      <!-- Navigation Column -->
+      <div>
+        <h3 class="text-lg font-semibold mb-4">Navegación</h3>
+        <ul class="space-y-3">
+          <li>
+            <a href="index.html" class="text-text-secondary hover:text-accent transition-colors">
+              Inicio
+            </a>
+          </li>
+          <li>
+            <a href="pages/servicios.html" class="text-text-secondary hover:text-accent transition-colors">
+              Servicios
+            </a>
+          </li>
+          <li>
+            <a href="pages/galeria.html" class="text-text-secondary hover:text-accent transition-colors">
+              Galería
+            </a>
+          </li>
+          <li>
+            <a href="pages/contacto.html" class="text-text-secondary hover:text-accent transition-colors">
+              Contacto
+            </a>
+          </li>
+        </ul>
+      </div>
+      
+      <!-- Contact Column -->
+      <div>
+        <h3 class="text-lg font-semibold mb-4">Contacto</h3>
+        <ul class="space-y-3">
+          <li class="flex items-center gap-2 text-text-secondary">
+            <i data-lucide="phone" class="w-4 h-4 text-accent"></i>
+            <a id="footer-phone" href="tel:+56912345678">+56 9 1234 5678</a>
+          </li>
+          <li class="flex items-center gap-2 text-text-secondary">
+            <i data-lucide="mail" class="w-4 h-4 text-accent"></i>
+            <a href="mailto:contacto@tattoworld.cl">contacto@tattoworld.cl</a>
+          </li>
+          <li class="flex items-start gap-2 text-text-secondary">
+            <i data-lucide="map-pin" class="w-4 h-4 text-accent mt-1"></i>
+            <span>Santiago, Chile<br>Servicio a domicilio</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+    
+    <!-- Bottom Bar -->
+    <div class="mt-12 pt-8 border-t border-border">
+      <div class="flex flex-col md:flex-row justify-between items-center gap-4">
+        <p class="text-text-muted text-sm">
+          &copy; <span id="current-year"></span> TattoWorld. Todos los derechos reservados.
+        </p>
+        <p class="text-text-muted text-sm">
+          Arte en cada tatuaje, higiene en cada paso.
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+  // Set current year
+  document.getElementById('current-year').textContent = new Date().getFullYear();
+</script>

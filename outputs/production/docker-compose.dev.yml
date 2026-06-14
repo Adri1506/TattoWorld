@@ -1,0 +1,31 @@
+# ==============================================================
+# Docker Compose - Development Environment
+# TattoWorld Static Site
+# ==============================================================
+
+services:
+  tattoworld-dev:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "3000:80"
+    volumes:
+      # Mount source files for live reload (read-only)
+      - ./outputs/development/index.html:/usr/share/nginx/html/index.html:ro
+      - ./outputs/development/pages:/usr/share/nginx/html/pages:ro
+      - ./outputs/development/assets:/usr/share/nginx/html/assets:ro
+      - ./outputs/development/site.webmanifest:/usr/share/nginx/html/site.webmanifest:ro
+    environment:
+      - NGINX_ENV=development
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "wget", "--no-verbose", "--tries=1", "--spider", "http://localhost:80/"]
+      interval: 30s
+      timeout: 3s
+      retries: 3
+
+# Networks
+networks:
+  default:
+    name: tattoworld-dev

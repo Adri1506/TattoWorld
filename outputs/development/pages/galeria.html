@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Galería - TattoWorld | Portafolio de Tatuajes</title>
+  <meta name="description" content="Explora nuestro portafolio de tatuajes. Blackwork, realismo, tradicional, fine line y más. Cada tatuaje es una obra única.">
+  <meta name="keywords" content="galería tatuajes, portafolio, blackwork, realismo, tradicional, fine line, punk">
+  
+  <meta property="og:title" content="Galería - TattoWorld">
+  <meta property="og:description" content="Portafolio de trabajos realizados">
+  <meta property="og:image" content="../assets/img/og-image.jpg">
+  
+  <link rel="icon" type="image/x-icon" href="../assets/img/icons/favicon.ico">
+  <link rel="stylesheet" href="../assets/vendor/fonts.css">
+  
+  <script src="../assets/vendor/tailwind.js"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: '#1a1a1a', secondary: '#2d2d2d', accent: '#c9a227', 'accent-hover': '#b8912a',
+            background: '#0d0d0d', surface: '#1e1e1e', 'text-primary': '#ffffff',
+            'text-secondary': '#a3a3a3', 'text-muted': '#666666', border: '#333333'
+          },
+          fontFamily: { sans: ['Inter', 'system-ui', 'sans-serif'] }
+        }
+      }
+    }
+  </script>
+  
+  <link rel="stylesheet" href="../assets/css/styles.css">
+  <link href="../assets/vendor/aos.css" rel="stylesheet">
+  <script src="../assets/vendor/lucide.min.js"></script>
+</head>
+<body class="bg-background text-text-primary font-sans">
+  <a href="#main-content" class="skip-link">Saltar al contenido principal</a>
+  
+  <!-- Navbar -->
+  <nav id="navbar" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-surface/95 backdrop-blur-md shadow-lg">
+    <div class="container mx-auto px-4 md:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-16 md:h-20">
+        <a href="../index.html" class="flex items-center gap-2">
+          <span class="text-2xl md:text-3xl font-bold text-accent">Tatto</span>
+          <span class="text-2xl md:text-3xl font-bold text-text-primary">World</span>
+        </a>
+        <div class="hidden md:flex items-center gap-8">
+          <a href="../index.html" class="nav-link text-text-secondary hover:text-accent transition-colors font-medium">Inicio</a>
+          <a href="servicios.html" class="nav-link text-text-secondary hover:text-accent transition-colors font-medium">Servicios</a>
+          <a href="galeria.html" class="nav-link text-accent font-medium">Galería</a>
+          <a href="contacto.html" class="nav-link text-text-secondary hover:text-accent transition-colors font-medium">Contacto</a>
+          <a href="contacto.html" class="btn btn-primary text-sm">Agendar Cita</a>
+        </div>
+        <button id="mobile-menu-btn" class="md:hidden p-2 text-text-secondary hover:text-accent" aria-label="Abrir menú" aria-expanded="false">
+          <i data-lucide="menu" class="w-6 h-6"></i>
+        </button>
+      </div>
+    </div>
+    <div id="mobile-menu" class="md:hidden hidden bg-surface border-t border-border">
+      <div class="container mx-auto px-4 py-4 flex flex-col gap-4">
+        <a href="../index.html" class="text-text-secondary hover:text-accent font-medium py-2">Inicio</a>
+        <a href="servicios.html" class="text-text-secondary hover:text-accent font-medium py-2">Servicios</a>
+        <a href="galeria.html" class="text-accent font-medium py-2">Galería</a>
+        <a href="contacto.html" class="text-text-secondary hover:text-accent font-medium py-2">Contacto</a>
+        <a href="contacto.html" class="btn btn-primary text-sm mt-2">Agendar Cita</a>
+      </div>
+    </div>
+  </nav>
+  
+  <main id="main-content">
+    <!-- Page Header -->
+    <section class="relative py-16 md:py-24 bg-surface overflow-hidden">
+      <div class="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-transparent via-accent to-transparent"></div>
+      <div class="container mx-auto px-4 md:px-6 lg:px-8 relative z-10">
+        <div class="max-w-3xl mx-auto text-center">
+          <nav class="mb-6" aria-label="Breadcrumb">
+            <ol class="flex items-center justify-center gap-2 text-sm text-text-muted">
+              <li><a href="../index.html" class="hover:text-accent transition-colors">Inicio</a></li>
+              <li aria-hidden="true">/</li>
+              <li class="text-accent" aria-current="page">Galería</li>
+            </ol>
+          </nav>
+          <h1 class="text-3xl md:text-4xl lg:text-5xl font-bold mb-4" data-aos="fade-up">Galería</h1>
+          <p class="text-lg md:text-xl text-text-secondary" data-aos="fade-up" data-aos-delay="100">Explora mi portafolio de trabajos realizados. Cada tatuaje es una obra única y personalizada.</p>
+        </div>
+      </div>
+    </section>
+    
+    <!-- Filter Bar -->
+    <section class="py-8 bg-background border-b border-border sticky top-16 z-40">
+      <div class="container mx-auto px-4 md:px-6 lg:px-8">
+        <div class="flex flex-wrap items-center justify-center gap-3" id="filter-bar">
+          <button class="filter-btn active px-4 py-2 rounded-full text-sm font-medium transition-all bg-accent text-background" data-filter="all">
+            Todos
+          </button>
+          <button class="filter-btn px-4 py-2 rounded-full text-sm font-medium transition-all bg-surface text-text-secondary hover:text-accent border border-border" data-filter="blackwork">
+            Blackwork
+          </button>
+          <button class="filter-btn px-4 py-2 rounded-full text-sm font-medium transition-all bg-surface text-text-secondary hover:text-accent border border-border" data-filter="realismo">
+            Realismo
+          </button>
+          <button class="filter-btn px-4 py-2 rounded-full text-sm font-medium transition-all bg-surface text-text-secondary hover:text-accent border border-border" data-filter="tradicional">
+            Tradicional
+          </button>
+          <button class="filter-btn px-4 py-2 rounded-full text-sm font-medium transition-all bg-surface text-text-secondary hover:text-accent border border-border" data-filter="fine-line">
+            Fine Line
+          </button>
+          <button class="filter-btn px-4 py-2 rounded-full text-sm font-medium transition-all bg-surface text-text-secondary hover:text-accent border border-border" data-filter="neo-tradicional">
+            Neo-Traditional
+          </button>
+          <button class="filter-btn px-4 py-2 rounded-full text-sm font-medium transition-all bg-surface text-text-secondary hover:text-accent border border-border" data-filter="punk">
+            Punk
+          </button>
+        </div>
+      </div>
+    </section>
+    
+    <!-- Gallery Grid -->
+    <section class="py-16 md:py-24 bg-background">
+      <div class="container mx-auto px-4 md:px-6 lg:px-8">
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6" id="gallery-grid">
+          <!-- Gallery Item 1 -->
+          <div class="gallery-item group cursor-pointer" data-category="blackwork" data-aos="fade-up" data-aos-delay="100">
+            <div class="relative aspect-square bg-surface rounded-xl overflow-hidden border border-border hover:border-accent transition-all duration-300">
+              <img src="../assets/img/gallery/tattoo-1.webp" alt="Tatuaje blackwork geométrico" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" loading="lazy">
+              <div class="absolute inset-0 bg-gradient-to-t from-background/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                <div class="absolute bottom-0 left-0 right-0 p-4">
+                  <span class="text-accent text-xs font-semibold uppercase">Blackwork</span>
+                  <h3 class="text-lg font-semibold">Diseño Geométrico</h3>
+                </div>
+              </div>
+              <div class="absolute top-4 right-4 opacity-0 group-hover:opacity-100 transition-opacity">
+                <div class="w-10 h-10 bg-accent rounded-full flex items-center justify-center">
+                  <i data-lucide="expand" class="w-5 h-5 text-background"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Gallery Item 2 -->
+          <div class="gallery-item group cursor-pointer" data-category="realismo" data-aos="fade-up" data-aos-delay="200">
+            <div class="relative aspect-square bg-surface rounded-xl overflow-hidden border border-border hover:border-accent transition-all duration-300">
+              <img src="../assets/img/gallery/tattoo-2.webp" alt="Tatuaje realista" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" loading="lazy">
+              <div class="absolute inset-0 bg-gradient-to-t from-background/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                <div class="absolute bottom-0 left-0 right-0 p-4">
+                  <span class="text-accent text-xs font-semibold uppercase">Realismo</span>
+                  <h3 class="text-lg font-semibold">Retrato Realista</h3>
+                </div>
+              </div>
+              <div class="absolute top-4 right-4 opacity-0 group-hover:opacity-100 transition-opacity">
+                <div class="w-10 h-10 bg-accent rounded-full flex items-center justify-center">
+                  <i data-lucide="expand" class="w-5 h-5 text-background"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Gallery Item 3 -->
+          <div class="gallery-item group cursor-pointer" data-category="tradicional" data-aos="fade-up" data-aos-delay="300">
+            <div class="relative aspect-square bg-surface rounded-xl overflow-hidden border border-border hover:border-accent transition-all duration-300">
+              <img src="../assets/img/gallery/tattoo-3.webp" alt="Tatuaje tradicional" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" loading="lazy">
+              <div class="absolute inset-0 bg-gradient-to-t from-background/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                <div class="absolute bottom-0 left-0 right-0 p-4">
+                  <span class="text-accent text-xs font-semibold uppercase">Tradicional</span>
+                  <h3 class="text-lg font-semibold">Rosa Tradicional</h3>
+                </div>
+              </div>
+              <div class="absolute top-4 right-4 opacity-0 group-hover:opacity-100 transition-opacity">
+                <div class="w-10 h-10 bg-accent rounded-full flex items-center justify-center">
+                  <i data-lucide="expand" class="w-5 h-5 text-background"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Gallery Item 4 -->
+          <div class="gallery-item group cursor-pointer" data-category="fine-line" data-aos="fade-up" data-aos-delay="100">
+            <div class="relative aspect-square bg-surface rounded-xl overflow-hidden border border-border hover:border-accent transition-all duration-300">
+              <img src="../assets/img/gallery/tattoo-4.webp" alt="Tatuaje fine line" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" loading="lazy">
+              <div class="absolute inset-0 bg-gradient-to-t from-background/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                <div class="absolute bottom-0 left-0 right-0 p-4">
+                  <span class="text-accent text-xs font-semibold uppercase">Fine Line</span>
+                  <h3 class="text-lg font-semibold">Flor Delicada</h3>
+                </div>
+              </div>
+              <div class="absolute top-4 right-4 opacity-0 group-hover:opacity-100 transition-opacity">
+                <div class="w-10 h-10 bg-accent rounded-full flex items-center justify-center">
+                  <i data-lucide="expand" class="w-5 h-5 text-background"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Gallery Item 5 -->
+          <div class="gallery-item group cursor-pointer" data-category="neo-tradicional" data-aos="fade-up" data-aos-delay="200">
+            <div class="relative aspect-square bg-surface rounded-xl overflow-hidden border border-border hover:border-accent transition-all duration-300">
+              <img src="../assets/img/gallery/tattoo-5.webp" alt="Tatuaje neo-traditional" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" loading="lazy">
+              <div class="absolute inset-0 bg-gradient-to-t from-background/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                <div class="absolute bottom-0 left-0 right-0 p-4">
+                  <span class="text-accent text-xs font-semibold uppercase">Neo-Traditional</span>
+                  <h3 class="text-lg font-semibold">Dragón Vibrante</h3>
+                </div>
+              </div>
+              <div class="absolute top-4 right-4 opacity-0 group-hover:opacity-100 transition-opacity">
+                <div class="w-10 h-10 bg-accent rounded-full flex items-center justify-center">
+                  <i data-lucide="expand" class="w-5 h-5 text-background"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Gallery Item 6 -->
+          <div class="gallery-item group cursor-pointer" data-category="punk" data-aos="fade-up" data-aos-delay="300">
+            <div class="relative aspect-square bg-surface rounded-xl overflow-hidden border border-border hover:border-accent transition-all duration-300">
+              <img src="../assets/img/gallery/tattoo-6.webp" alt="Tatuaje punk" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" loading="lazy">
+              <div class="absolute inset-0 bg-gradient-to-t from-background/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                <div class="absolute bottom-0 left-0 right-0 p-4">
+                  <span class="text-accent text-xs font-semibold uppercase">Punk</span>
+                  <h3 class="text-lg font-semibold">Calavera Rebelde</h3>
+                </div>
+              </div>
+              <div class="absolute top-4 right-4 opacity-0 group-hover:opacity-100 transition-opacity">
+                <div class="w-10 h-10 bg-accent rounded-full flex items-center justify-center">
+                  <i data-lucide="expand" class="w-5 h-5 text-background"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Empty State -->
+        <div id="empty-state" class="hidden text-center py-16">
+          <i data-lucide="image-off" class="w-16 h-16 text-text-muted mx-auto mb-4"></i>
+          <h3 class="text-xl font-semibold mb-2">No hay trabajos en esta categoría</h3>
+          <p class="text-text-secondary">Prueba con otro filtro o visita nuestra galería completa.</p>
+        </div>
+      </div>
+    </section>
+    
+    <!-- CTA Section -->
+    <section class="py-16 md:py-24 bg-surface">
+      <div class="container mx-auto px-4 md:px-6 lg:px-8">
+        <div class="max-w-4xl mx-auto text-center">
+          <h2 class="text-3xl md:text-4xl font-bold mb-4" data-aos="fade-up">¿Te gustó algún diseño?</h2>
+          <p class="text-lg text-text-secondary mb-8" data-aos="fade-up" data-aos-delay="100">Cada tatuaje es personalizado. Cuéntame tu idea y la hacemos realidad.</p>
+          <div class="flex flex-col sm:flex-row items-center justify-center gap-4" data-aos="fade-up" data-aos-delay="200">
+            <a href="contacto.html" class="btn btn-primary text-lg px-8 py-4">
+              <i data-lucide="calendar" class="w-5 h-5"></i>
+              Agenda tu Cita
+            </a>
+            <a id="galeria-whatsapp-cta" href="#" target="_blank" rel="noopener noreferrer" class="btn btn-secondary text-lg px-8 py-4">
+              <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+              Escríbenos por WhatsApp
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  
+  <!-- Lightbox Modal -->
+  <div id="lightbox" class="fixed inset-0 z-50 hidden bg-background/95 backdrop-blur-md">
+    <div class="absolute inset-0 flex items-center justify-center p-4">
+      <button id="lightbox-close" class="absolute top-4 right-4 p-2 text-text-secondary hover:text-accent transition-colors" aria-label="Cerrar">
+        <i data-lucide="x" class="w-8 h-8"></i>
+      </button>
+      <button id="lightbox-prev" class="absolute left-4 top-1/2 -translate-y-1/2 p-2 text-text-secondary hover:text-accent transition-colors" aria-label="Imagen anterior">
+        <i data-lucide="chevron-left" class="w-8 h-8"></i>
+      </button>
+      <button id="lightbox-next" class="absolute right-4 top-1/2 -translate-y-1/2 p-2 text-text-secondary hover:text-accent transition-colors" aria-label="Imagen siguiente">
+        <i data-lucide="chevron-right" class="w-8 h-8"></i>
+      </button>
+      <img id="lightbox-img" src="" alt="" class="max-w-full max-h-full object-contain rounded-lg">
+      <div id="lightbox-caption" class="absolute bottom-4 left-1/2 -translate-x-1/2 text-center">
+        <p id="lightbox-title" class="text-lg font-semibold"></p>
+        <p id="lightbox-category" class="text-accent text-sm"></p>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Footer -->
+  <footer class="bg-surface border-t border-border">
+    <div class="container mx-auto px-4 md:px-6 lg:px-8 py-12">
+      <div class="flex flex-col md:flex-row justify-between items-center gap-4">
+        <a href="../index.html" class="flex items-center gap-2">
+          <span class="text-xl font-bold text-accent">Tatto</span>
+          <span class="text-xl font-bold">World</span>
+        </a>
+        <p class="text-text-muted text-sm">&copy; 2026 TattoWorld. Todos los derechos reservados.</p>
+      </div>
+    </div>
+  </footer>
+  
+  <!-- WhatsApp Button -->
+  <div class="fixed bottom-6 right-6 z-40">
+    <a id="whatsapp-link" href="#" target="_blank" rel="noopener noreferrer" class="group flex items-center gap-3" aria-label="Contactar por WhatsApp">
+      <span class="hidden md:block bg-surface text-text-primary px-4 py-2 rounded-lg shadow-lg opacity-0 group-hover:opacity-100 transition-opacity text-sm font-medium">¡Escríbenos!</span>
+      <div class="relative">
+        <span class="absolute inset-0 bg-green-500 rounded-full animate-ping opacity-75"></span>
+        <span class="relative flex items-center justify-center w-14 h-14 bg-green-500 rounded-full shadow-lg hover:bg-green-600 transition-colors">
+          <svg class="w-7 h-7 text-white" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+        </span>
+      </div>
+    </a>
+  </div>
+  
+  <script src="../assets/vendor/aos.js"></script>
+  <script src="../assets/js/config.js"></script>
+  <script src="../assets/js/whatsapp.js"></script>
+  <script>
+    AOS.init({ duration: 600, easing: 'ease-out-cubic', once: true, offset: 50 });
+    lucide.createIcons();
+    
+    // Mobile menu
+    const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+    mobileMenuBtn.addEventListener('click', () => {
+      const isExpanded = mobileMenuBtn.getAttribute('aria-expanded') === 'true';
+      mobileMenuBtn.setAttribute('aria-expanded', !isExpanded);
+      mobileMenu.classList.toggle('hidden');
+      const icon = mobileMenuBtn.querySelector('i');
+      icon.setAttribute('data-lucide', isExpanded ? 'menu' : 'x');
+      lucide.createIcons();
+    });
+    
+    // Gallery filter
+    const filterBtns = document.querySelectorAll('.filter-btn');
+    const galleryItems = document.querySelectorAll('.gallery-item');
+    const emptyState = document.getElementById('empty-state');
+    
+    filterBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        filterBtns.forEach(b => {
+          b.classList.remove('bg-accent', 'text-background');
+          b.classList.add('bg-surface', 'text-text-secondary', 'border', 'border-border');
+        });
+        btn.classList.add('bg-accent', 'text-background');
+        btn.classList.remove('bg-surface', 'text-text-secondary', 'border', 'border-border');
+        
+        const filter = btn.dataset.filter;
+        let visibleCount = 0;
+        
+        galleryItems.forEach(item => {
+          if (filter === 'all' || item.dataset.category === filter) {
+            item.style.display = 'block';
+            visibleCount++;
+          } else {
+            item.style.display = 'none';
+          }
+        });
+        
+        emptyState.classList.toggle('hidden', visibleCount > 0);
+      });
+    });
+    
+    // Lightbox
+    const lightbox = document.getElementById('lightbox');
+    const lightboxImg = document.getElementById('lightbox-img');
+    const lightboxTitle = document.getElementById('lightbox-title');
+    const lightboxCategory = document.getElementById('lightbox-category');
+    const lightboxClose = document.getElementById('lightbox-close');
+    const lightboxPrev = document.getElementById('lightbox-prev');
+    const lightboxNext = document.getElementById('lightbox-next');
+    
+    let currentIndex = 0;
+    let visibleItems = [];
+    
+    function updateVisibleItems() {
+      visibleItems = Array.from(galleryItems).filter(item => item.style.display !== 'none');
+    }
+    
+    function openLightbox(index) {
+      updateVisibleItems();
+      currentIndex = index;
+      const item = visibleItems[currentIndex];
+      const img = item.querySelector('img');
+      const title = item.querySelector('h3').textContent;
+      const category = item.querySelector('.text-accent').textContent;
+      
+      lightboxImg.src = img.src;
+      lightboxImg.alt = img.alt;
+      lightboxTitle.textContent = title;
+      lightboxCategory.textContent = category;
+      lightbox.classList.remove('hidden');
+      document.body.style.overflow = 'hidden';
+    }
+    
+    function closeLightbox() {
+      lightbox.classList.add('hidden');
+      document.body.style.overflow = '';
+    }
+    
+    function navigateLightbox(direction) {
+      currentIndex = (currentIndex + direction + visibleItems.length) % visibleItems.length;
+      const item = visibleItems[currentIndex];
+      const img = item.querySelector('img');
+      const title = item.querySelector('h3').textContent;
+      const category = item.querySelector('.text-accent').textContent;
+      
+      lightboxImg.src = img.src;
+      lightboxImg.alt = img.alt;
+      lightboxTitle.textContent = title;
+      lightboxCategory.textContent = category;
+    }
+    
+    galleryItems.forEach((item, index) => {
+      item.addEventListener('click', () => openLightbox(index));
+    });
+    
+    lightboxClose.addEventListener('click', closeLightbox);
+    lightboxPrev.addEventListener('click', () => navigateLightbox(-1));
+    lightboxNext.addEventListener('click', () => navigateLightbox(1));
+    lightbox.addEventListener('click', (e) => { if (e.target === lightbox) closeLightbox(); });
+    
+    document.addEventListener('keydown', (e) => {
+      if (lightbox.classList.contains('hidden')) return;
+      if (e.key === 'Escape') closeLightbox();
+      if (e.key === 'ArrowLeft') navigateLightbox(-1);
+      if (e.key === 'ArrowRight') navigateLightbox(1);
+    });
+  </script>
+</body>
+</html>

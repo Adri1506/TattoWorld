@@ -1,0 +1,68 @@
+# ==============================================================
+# Dockerignore - TattoWorld
+# Exclude unnecessary files from Docker build context
+# ==============================================================
+
+# Version control
+.git
+.gitignore
+.github
+
+# Development outputs (we copy from here, but ignore meta files)
+outputs/development/execution_trace.md
+outputs/development/README.md
+outputs/development/CHANGELOG.md
+outputs/development/security-fixes.md
+
+# Production files (don't need to be in the image)
+outputs/production/
+outputs/architecture/
+outputs/security/
+outputs/qa/
+outputs/planning/
+outputs/design/
+
+# Environment files
+.env
+.env.*
+!.env.example
+
+# IDE and editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Node modules (if any)
+node_modules/
+package-lock.json
+yarn.lock
+pnpm-lock.yaml
+
+# Test files
+tests/
+test/
+*.test.js
+*.spec.js
+coverage/
+
+# Documentation
+*.md
+!outputs/development/README.md
+
+# Build artifacts
+dist/
+build/
+.cache/
+
+# Temporary files
+tmp/
+temp/
+*.tmp
+*.log

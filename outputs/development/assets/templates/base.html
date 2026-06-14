@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  
+  <!-- SEO Meta Tags -->
+  <title>TattoWorld - Tatuajes a Domicilio | {PAGE_TITLE}</title>
+  <meta name="description" content="{PAGE_DESCRIPTION}">
+  <meta name="keywords" content="tatuajes, tatuajes a domicilio, tatuador, blackwork, realismo, tradicional, fine line, punk">
+  <meta name="author" content="TattoWorld">
+  <meta name="robots" content="index, follow">
+  
+  <!-- Open Graph -->
+  <meta property="og:title" content="TattoWorld - Tatuajes a Domicilio">
+  <meta property="og:description" content="{PAGE_DESCRIPTION}">
+  <meta property="og:image" content="assets/img/og-image.svg">
+  <meta property="og:url" content="https://tattoworld.github.io">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="es_CL">
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="assets/img/icons/favicon.svg">
+  <link rel="manifest" href="site.webmanifest">
+  
+  <!-- Google Fonts - Inter (Local) -->
+  <link rel="stylesheet" href="assets/vendor/fonts.css">
+  
+  <!-- Tailwind CSS (Local) -->
+  <script src="assets/vendor/tailwind.js"></script>
+  <script src="assets/js/tailwind-config.js"></script>
+  
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="assets/css/styles.css">
+  
+  <!-- AOS - Animate On Scroll (Local) -->
+  <link href="assets/vendor/aos.css" rel="stylesheet">
+  
+  <!-- Lucide Icons (Local) -->
+  <script src="assets/vendor/lucide.min.js"></script>
+  
+  <!-- Schema.org structured data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "TattoWorld",
+    "description": "Tatuajes a domicilio en tu zona",
+    "url": "https://tattoworld.github.io",
+    "telephone": "+56912345678",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Santiago",
+      "addressRegion": "RM",
+      "addressCountry": "CL"
+    },
+    "priceRange": "$$"
+  }
+  </script>
+</head>
+<body class="bg-background text-text-primary font-sans">
+  <!-- Skip to main content -->
+  <a href="#main-content" class="skip-link">Saltar al contenido principal</a>
+  
+  <!-- Navbar -->
+  <div id="navbar-container"></div>
+  
+  <!-- Main Content -->
+  <main id="main-content">
+    <!-- Page content goes here -->
+  </main>
+  
+  <!-- Footer -->
+  <div id="footer-container"></div>
+  
+  <!-- WhatsApp Floating Button -->
+  <div id="whatsapp-container"></div>
+  
+  <!-- Scripts -->
+  <script src="assets/vendor/aos.js"></script>
+  <script src="assets/js/config.js"></script>
+  <script src="assets/js/whatsapp.js"></script>
+  <script src="assets/js/main.js"></script>
+  
+  <!-- Page-specific scripts -->
+  <script>
+    // Initialize AOS
+    AOS.init({
+      duration: 600,
+      easing: 'ease-out-cubic',
+      once: true,
+      offset: 50
+    });
+    
+    // Initialize Lucide Icons
+    lucide.createIcons();
+  </script>
+  
+  <!-- Page-specific scripts slot -->
+  <script>
+    // {PAGE_SCRIPTS}
+  </script>
+</body>
+</html>

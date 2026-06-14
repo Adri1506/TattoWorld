@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <!-- Background -->
+  <rect width="1200" height="630" fill="#0d0d0d"/>
+  
+  <!-- Gradient overlay -->
+  <defs>
+    <linearGradient id="grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1a1a1a;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#2d2d2d;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#grad)"/>
+  
+  <!-- Decorative elements -->
+  <circle cx="100" cy="100" r="200" fill="#c9a227" opacity="0.1"/>
+  <circle cx="1100" cy="530" r="150" fill="#c9a227" opacity="0.1"/>
+  
+  <!-- Logo text -->
+  <text x="600" y="280" font-family="Arial, sans-serif" font-size="72" font-weight="bold" fill="#c9a227" text-anchor="middle">Tatto</text>
+  <text x="600" y="350" font-family="Arial, sans-serif" font-size="72" font-weight="bold" fill="#ffffff" text-anchor="middle">World</text>
+  
+  <!-- Tagline -->
+  <text x="600" y="420" font-family="Arial, sans-serif" font-size="24" fill="#a3a3a3" text-anchor="middle">Tatuajes a Domicilio en Santiago</text>
+  
+  <!-- Decorative line -->
+  <rect x="500" y="450" width="200" height="2" fill="#c9a227"/>
+  
+  <!-- Contact info -->
+  <text x="600" y="500" font-family="Arial, sans-serif" font-size="18" fill="#666666" text-anchor="middle">+56 9 1234 5678 | contacto@tattoworld.cl</text>
+</svg>
