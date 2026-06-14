@@ -1,6 +1,10 @@
 # TattoWorld - Tatuajes a Domicilio
 
+[![Deployed on Vercel](https://img.shields.io/badge/Deployed%20on-Vercel-black?style=flat-square&logo=vercel)](https://tatto-world.vercel.app/)
+
 Sitio web estático para servicio de tatuajes a domicilio en Santiago, Chile.
+
+🌐 **Sitio en vivo:** [tatto-world.vercel.app](https://tatto-world.vercel.app/)
 
 ## Descripción
 
@@ -19,11 +23,11 @@ TattoWorld es una página web estática que ofrece información sobre servicios 
 ## Tecnologías
 
 - HTML5
-- Tailwind CSS (CDN)
+- Tailwind CSS (local)
 - JavaScript ES2024
-- Lucide Icons
+- Lucide Icons (local)
 - AOS (Animate On Scroll)
-- Formspree (formularios)
+- **Vercel** (hosting y despliegue automático)
 
 ## Estructura del Proyecto
 
@@ -99,15 +103,20 @@ Editar las variables CSS en `assets/css/styles.css`:
 }
 ```
 
-## Despliegue en GitHub Pages
+## Despliegue
 
-1. Crear repositorio en GitHub
-2. Subir código al repositorio
-3. Ir a Settings > Pages
-4. Seleccionar rama `main` y carpeta `/ (root)`
-5. Guardar
+El sitio está desplegado en **Vercel**:
+- 🌐 URL: https://tatto-world.vercel.app/
+- 📦 Repositorio: https://github.com/Adri1506/TattoWorld
 
-El sitio estará disponible en: `https://usuario.github.io/tattoworld/`
+### Deploy Automático
+Vercel despliega automáticamente cada push a la rama `master`.
+
+### Despliegue Manual
+```bash
+npm i -g vercel
+vercel
+```
 
 ## Rendimiento
 
